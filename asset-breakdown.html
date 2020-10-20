@@ -11,6 +11,12 @@
        else
           e.style.display = 'block';
     }
+    
+    function moveToNext(field,nextFieldID){
+  if(field.value.length >= field.maxLength){
+    document.getElementById(nextFieldID).focus();
+  }
+}
 //-->
 </script>
 
@@ -18,11 +24,30 @@
 </head>
 
 <body style="margin: 20px">
-<p style="  border-left: 6px solid grey; padding: 5px; ">To complete this section accurately, you may need. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est.</p>
-  <p>Some advestments do not obviously fall into any of the categories available. Proin efficitur, turpis sit amet tempor tincidunt, turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est.</p>
+  
+  <form>
+<p style="  border-left: 6px solid grey; padding: 5px; ">To complete this section accurately, you may need. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Proin efficitur, turpis sit amet tempor tincidunt, turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est.</p>
+  <p>Some advestments do not obviously fall into any of the categories available. Proin efficitur, turpis sit amet tempor tincidunt, turpis nisi hendrerit 
+    magna, vitae accumsan lectus neque eu lectus. Integer ac felis est.</p>
   
   <a href="#" onclick="toggle_visibility('help');">Help with Multi-Asset Funds</a>
-<div id="help" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est. Nulla massa leo, blandit sit amet blandit quis, feugiat non nisi. Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div><p>
+<div id="help" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
+  turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est. Nulla massa leo, blandit sit amet blandit quis, feugiat non nisi. 
+  Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
+  nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div><p>
+  
+  <div style="background-color: #888888; padding: 5px">
+    <h4> Date of Valuation of Assets</h4>
+    <p>For examle 31 3 2019...</p>
+    
+    <input type="text" id="dd" maxlength=2 onkeyup="moveToNext(this,'mm')"/>
+<input type="text" id="mm" maxlength=2 onkeyup="moveToNext(this,'yyyy')"/>
+<input type="text" id="yyyy" maxlength=4 />
+
+  </div>
+    
+  </form>
 </body>
 
 </html>
