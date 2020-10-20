@@ -1,12 +1,28 @@
-<html>
+<!DOCTYPE html>
 
 <head>
+  
+  <script type="text/javascript">
+<!--
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+//-->
+</script>
+
 
 </head>
 
 <body style="margin: 20px">
 <p style="  border-left: 6px solid grey; ">To complete this section accurately, you may need. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est.</p>
-
+  <p>Some advestments do not obviously fall into any of the categories available. Proin efficitur, turpis sit amet tempor tincidunt, turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est.</p>
+  
+  a href="#" onclick="toggle_visibility('foo');">Click here to toggle visibility of element #foo</a>
+<div id="foo">Help with Multi-Asset Funds</div><p>
 </body>
 
 </html>
