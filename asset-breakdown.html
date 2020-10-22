@@ -28,6 +28,7 @@
   
   body { font-family: 'Open Sans', sans-serif;
     color: #585858;
+    margin: 30px;
   }
   
   p{ 
@@ -69,6 +70,10 @@ a visited {
   font-weight: bold;
 }
   
+hr {
+  border-top: 1px solid #585858;
+  }
+  
   
   
 </style>
@@ -76,10 +81,10 @@ a visited {
 
 </head>
 
-<body style="margin: 20px">
+<body>
   <div style="width: 700px">
   <h1>Asset-Breakdown</h1>
-  <hr style="color: #CACACA">
+  <hr>
   
   <form>
 <p style="  border-left: 6px solid #CACACA; padding:0px 0px 0px 30px; font-weight: bold;">To complete this section accurately, you may need. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -119,9 +124,9 @@ a visited {
     <h4 style="margin-top: 0px; padding-top: 0px"> Date of Valuation of Assets</h4>
     <p style="color:">For example, 31 3 2019 or 31 03 2019</p>
  
-    <label for="dd">Day<input type="text" id="dd" maxlength=2 label="Day" onkeyup="moveToNext(this,'mm')" style="margin: 0 4px 0 4px; width: 40px"/></label>
-<label for="mm">Month<input type="text" id="mm" maxlength=2 label="Month"  onkeyup="moveToNext(this,'yyyy')" style="margin: 0 4px 0 4px; width: 40px"/></label>
-<label for="yyyy">Year<input type="text" id="yyyy"  label="Year"  maxlength=4 style="margin: 0 4px 0 4px; width: 80px" /></label>
+    <label for="dd">Day<br/></label><input type="text" id="dd" maxlength=2 label="Day" onkeyup="moveToNext(this,'mm')" style="margin: 0 4px 0 4px; width: 40px"/>
+<label for="mm">Month<br/></label><input type="text" id="mm" maxlength=2 label="Month"  onkeyup="moveToNext(this,'yyyy')" style="margin: 0 4px 0 4px; width: 40px"/>
+<label for="yyyy">Year<br/></label><input type="text" id="yyyy"  label="Year"  maxlength=4 style="margin: 0 4px 0 4px; width: 80px" />
      </div>
 
     
