@@ -27,7 +27,7 @@
   
   
   body { font-family: 'Open Sans', sans-serif;
-    color: #3D3D3D;
+    color: #585858;
   }
   
   p{ 
@@ -38,10 +38,12 @@
   h1 {
     font-size: 50px;
     font-weight: 200;
+    color: #3D3D3D;
   }
   
   h2 {
     font-weight: 200;
+    color: #3D3D3D;
   }
 
     
@@ -115,11 +117,11 @@ a visited {
   
   <div style="background-color: #F0F0F0; padding: 30px">
     <h4 style="margin-top: 0px; padding-top: 0px"> Date of Valuation of Assets</h4>
-    <p>For examle 31 3 2019...</p>
+    <p style="color:">For example, 31 3 2019 or 31 03 2019</p>
  
-    <label for="dd">Day</label><input type="text" id="dd" maxlength=2 label="Day" onkeyup="moveToNext(this,'mm')" style="margin: 0 4px 0 4px; width: 40px"/>
-<input type="text" id="mm" maxlength=2 label="Month"  onkeyup="moveToNext(this,'yyyy')" style="margin: 0 4px 0 4px; width: 40px"/>
-<input type="text" id="yyyy"  label="Year"  maxlength=4 style="margin: 0 4px 0 4px; width: 80px" />
+    <label for="dd">Day<input type="text" id="dd" maxlength=2 label="Day" onkeyup="moveToNext(this,'mm')" style="margin: 0 4px 0 4px; width: 40px"/></label>
+<label for="mm">Month<input type="text" id="mm" maxlength=2 label="Month"  onkeyup="moveToNext(this,'yyyy')" style="margin: 0 4px 0 4px; width: 40px"/></label>
+<label for="yyyy">Year<input type="text" id="yyyy"  label="Year"  maxlength=4 style="margin: 0 4px 0 4px; width: 80px" /></label>
      </div>
 
     
