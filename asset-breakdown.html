@@ -162,11 +162,70 @@ hr {
       <h2>Asset-Breakdown</h2>
   <p>Some advestments do not obviously fall into any of the categories available. Proin efficitur, turpis sit amet tempor tincidunt, turpis nisi hendrerit 
     magna, vitae accumsan lectus neque eu lectus. Integer ac felis est.</p>
+
+
+          <label>Property</label>
+          <p><input onblur="findTotal()" type="text" class="amount" name="property" />%</p>
+   
+     <a href="#/" onclick="toggle_visibility('help2');">Help with property</a>
+<div id="help2" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
+  turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est. Nulla massa leo, blandit sit amet blandit quis, feugiat non nisi. 
+  Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
+  nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
+
+     
+     <label>Insurance Fund</label>
+         $ <input onblur="findTotal()" type="text" class="amount" name="insurancefund" /></p>
+
+  <a href="#/" onclick="toggle_visibility('help3');">Help with Insurance fund</a>
+<div id="help3" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
+  turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est. Nulla massa leo, blandit sit amet blandit quis, feugiat non nisi. 
+  Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
+  nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
+
+     
+     <label>Deferred or immediate full insured annuites</label>
+         $ <input onblur="findTotal()" type="text" class="amount" name="dmscost" /></p>
+
+  <a href="#/" onclick="toggle_visibility('help4');">Help with Deferred or immediate full insured annuites</a>
+<div id="help4" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
+  turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est. Nulla massa leo, blandit sit amet blandit quis, feugiat non nisi. 
+  Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
+  nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
+
+     
+<label>Insurance Fund</label>
+         $ <input onblur="findTotal()" type="text" class="amount" name="preprintcost" /></p>
+
+  <a href="#/" onclick="toggle_visibility('help5');">Help with Insurance Fund</a>
+<div id="help5" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
+  turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est. Nulla massa leo, blandit sit amet blandit quis, feugiat non nisi. 
+  Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
+  nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
+
+<label>Cash and current assets</label>
+         $ <input onblur="findTotal()" type="text" class="amount" name="preprintcost" /></p>
+
+  <a href="#/" onclick="toggle_visibility('help6');">Help with Cash and current assets</a>
+<div id="help6" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
+  turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est. Nulla massa leo, blandit sit amet blandit quis, feugiat non nisi. 
+  Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
+  nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
+
+
+
+     
+     <p><strong>Overall Cost of Order <span class="required">*</span></strong><br />
+         $ <input type="text" name="totalordercost" id="totalordercost" /></p>
+
+
+
+
         
-    <fieldset>
+    <!-- <fieldset>
      
   <div class="form-group">
- <!-- <label>Property</label><br>
+ <label>Property</label><br>
          <input type="number" class="form-control prc">%
       </div>
 
@@ -186,7 +245,7 @@ hr {
 <div id="help4" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
   turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est. Nulla massa leo, blandit sit amet blandit quis, feugiat non nisi. 
   Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
-  nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>-->
+  nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
 
         
      <div class="form-group">
@@ -251,7 +310,7 @@ hr {
 <output id="result"></output>%
       
       
-  </form>
+  </form>-->
   </div>
 
 
@@ -259,37 +318,6 @@ hr {
 
 
 
- <div>
-     
-          <label>Property</label>
-          <p><input onblur="findTotal()" type="text" class="amount" name="property" />%</p>
-   
-     <a href="#/" onclick="toggle_visibility('help3');">Help with property</a>
-<div id="help3" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
-  turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est. Nulla massa leo, blandit sit amet blandit quis, feugiat non nisi. 
-  Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
-  nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
-
-     
-     <label>Insurance Fund</label>
-         $ <input onblur="findTotal()" type="text" class="amount" name="insurancefund" /></p>
-
-  <a href="#/" onclick="toggle_visibility('help4');">Help with Insurance fund</a>
-<div id="help4" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
-  turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est. Nulla massa leo, blandit sit amet blandit quis, feugiat non nisi. 
-  Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
-  nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
-
-     
-     <p><strong>Cost of DMS Portion</strong><br />
-         $ <input onblur="findTotal()" type="text" class="amount" name="dmscost" /></p>
-     
-     <p><strong>Cost of Pre-Print Portion</strong><br />
-         $ <input onblur="findTotal()" type="text" class="amount" name="preprintcost" /></p>
-     
-     <p><strong>Overall Cost of Order <span class="required">*</span></strong><br />
-         $ <input type="text" name="totalordercost" id="totalordercost" /></p>
-</div>
 
 
 <script>
