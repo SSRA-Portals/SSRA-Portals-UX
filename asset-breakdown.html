@@ -22,17 +22,9 @@
   }
 }
 //-->
-    $('.form-group').on('input','.prc',function(){
-      var totalSum = 0;
-      $('.form-group .prc').each(function(){
-        var inputVal = $(this).val();
-        if($.isNumeric(inputVal)){
-          totalSum += parseFloat(inputVal);
-        });
-      $('#result').text(totalSum)
-    });
    
 </script>
+  
   
   
 <style>
@@ -153,12 +145,12 @@ hr {
     <h4 style="margin-top: 0px; padding-top: 0px"> Date of Valuation of Assets</h4>
     <p style="color:">For example, 31 3 2019 or 31 03 2019</p>
  
-    <label for="dd" style="float:left;">Day
-    <input type="text" id="dd" maxlength=2 label="Day" onkeyup="moveToNext(this,'mm')" style="margin: 0 4px 0 4px; width: 30px; "/></label>
-<label for="mm" style="float:left;">Month
-    <input type="text" id="mm" maxlength=2 label="Month"  onkeyup="moveToNext(this,'yyyy')" style="margin: 0 4px 0 4px; width: 30px; "/></label>
-<label for="yyyy" style="float:left;">Year
-    <input type="text" id="yyyy"  label="Year"  maxlength=4 style="margin: 0 4px 0 4px; width: 70px; " /></label>
+    <label for="dd" style="float:left;">Day</label>
+    <input type="text" id="dd" maxlength=2 label="Day" onkeyup="moveToNext(this,'mm')" style="margin: 0 4px 0 4px; width: 30px; "/>
+<label for="mm" style="float:left;">Month</label>
+    <input type="text" id="mm" maxlength=2 label="Month"  onkeyup="moveToNext(this,'yyyy')" style="margin: 0 4px 0 4px; width: 30px; "/>
+<label for="yyyy" style="float:left;">Year</label>
+    <input type="text" id="yyyy"  label="Year"  maxlength=4 style="margin: 0 4px 0 4px; width: 70px; " />
      </div>
 
     
@@ -171,7 +163,7 @@ hr {
      
   <div class="form-group">
   <label for="property">Property</label><br>
-  <input type="number" id="property" name="property" class="form-control prc>%<br></div>
+         <input type="number" class="form-control prc">%<br></div>
   </div>
 
   <a href="#/" onclick="toggle_visibility('help3');">Help with property</a>
@@ -184,7 +176,7 @@ hr {
    <div style="margin-top: 30px"> 
    <div class="form-group">
      <label for="insurance">Insurnace Fund</label><br>
-     <input type="number" id="insurance" name="insurance" class="form-control prc>%<br></div>
+         <input type="number" class="form-control prc">%<br></div>
    </div>
      
   <a href="#/" onclick="toggle_visibility('help4');">Help with Insurance fund</a>
@@ -197,7 +189,7 @@ hr {
    <div style="margin-top: 30px">  
      <div class="form-group">
         <label for="annuities">Deferred or immediate full insured annuites</label><br>
-        <input type="number" id="annuites" name="annuites" class="form-control prc>%<br></div>
+         <input type="number" class="form-control prc">%<br></div>
      </div>
 
   <a href="#/" onclick="toggle_visibility('help5');">Help with Deferred or immediate full insured annuites</a>
@@ -210,7 +202,7 @@ hr {
                                   <div class="form-group">
 
      <label for="hedge">Hedge Fund</label><br>
-     <input type="number" id="hedge" name="hedge">%<br></div>
+         <input type="number" class="form-control prc">%<br></div>
                                                  </div>
 
   <a href="#/" onclick="toggle_visibility('help6');">Help with Hedge fund</a>
@@ -223,7 +215,7 @@ hr {
                                   <div class="form-group">
 
      <label for="insurance">Insurnace Fund</label><br>
-     <input type="number" id="insurance" name="insurance">%<br></div>
+         <input type="number" class="form-control prc">%<br></div>
                                                          </div>
 
   <a href="#/" onclick="toggle_visibility('help7');">Help with Insurance fund</a>
@@ -236,7 +228,7 @@ hr {
                                   <div class="form-group">
 
      <label for="cash">Cash and current assets</label><br>
-     <input type="number" id="cash" name="cash" class="form-control prc>%<br></div>
+         <input type="number" class="form-control prc">%<br></div>
 </div>
 
   <a href="#/" onclick="toggle_visibility('help8');">Help with Cash and current assets</a>
@@ -250,7 +242,7 @@ hr {
            <div class="form-group">
 
          <label for="Commodities">Commodities</label><br>
-         <input type="number" id="Commodities" name="Commodities" class="form-control prc">%<br></div>
+         <input type="number" class="form-control prc">%<br></div>
 </div>
 
   <a href="#/" onclick="toggle_visibility('help9');">Help with Commodities</a>
@@ -267,6 +259,20 @@ hr {
     
   </form>
   </div>
+
+  <script>
+        $('.form-group').on('input','.prc',function(){
+      var totalSum = 0;
+      $('.form-group .prc').each(function(){
+        var inputVal = $(this).val();
+        if($.isNumeric(inputVal)){
+          totalSum += parseFloat(inputVal);
+        });
+      $('#result').text(totalSum)
+    });
+
+  </script>
+
 </body>
 
 </html>
