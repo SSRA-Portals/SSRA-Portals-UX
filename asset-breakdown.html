@@ -26,46 +26,6 @@
   
   
     
-    
-     <script type="text/javascript">
-      function num(id) {
-          var e = document.getElementById(id);
-          if (e != null) {
-              var v = e.value;
-              if (/^\\d+$/.test(v)) {
-                  return parseInt(v, 10);
-              }
-          }
-          return 0;
-      }
-
-      function sum() {
-          var v1 = num("v1");
-          var v2 = num("v2");
-          var v3 = num("v3");
-          var r  = document.getElementById("result");
-          if (r != null) {
-              r.value = v1 + v2 + v3;
-          }
-      }
-
-      function addHandler(element, eventName, handler) {
-          if (element.addEventListener) {
-              element.addEventListener(eventName, handler, false);
-          } else if (element.attachEvent) {
-              element.attachEvent("on" + eventName, handler);
-          }
-      }
-
-      addHandler(window, "load",
-                 function() {
-                   addHandler(document.getElementById("v1"), "keyup", sum);
-                   addHandler(document.getElementById("v2"), "keyup", sum);
-                   addHandler(document.getElementById("v3"), "keyup", sum);
-                 });
-    </script>
-
-  
   
   
 
@@ -291,33 +251,40 @@ hr {
 <output id="result"></output>%
       
       
-     <form action="">
-      <fieldset>
-        <legend>Input</legend>
-        <label for="v1">Value 1</label>
-        <input type="text" id="v1">
-        <br>
-        <label for="v2">Value 2</label>
-        <input type="text" id="v2">
-        <br>
-        <label for="v3">Value 3</label>
-        <input type="text" id="v3">
-      </fieldset>
-      <fieldset>
-        <legend>Output</legend>
-        <input type="text" id="result" readonly>
-      </fieldset>
-    </form>
-     
-
-
-        </fieldset>
-
   </form>
   </div>
 
+ <div>
+     <h2>Pricing</h2>
+     
+     <p><strong>Cost of Print Portion</strong><br />
+         $ <input onblur="findTotal()" type="text" class="amount" name="printcost" /></p>
+     
+     <p><strong>Cost of Digital Portion</strong><br />
+         $ <input onblur="findTotal()" type="text" class="amount" name="digitalcost" /></p>
+     
+     <p><strong>Cost of DMS Portion</strong><br />
+         $ <input onblur="findTotal()" type="text" class="amount" name="dmscost" /></p>
+     
+     <p><strong>Cost of Pre-Print Portion</strong><br />
+         $ <input onblur="findTotal()" type="text" class="amount" name="preprintcost" /></p>
+     
+     <p><strong>Overall Cost of Order <span class="required">*</span></strong><br />
+         $ <input type="text" name="totalordercost" id="totalordercost" /></p>
+</div>
 
 
+<script>
+  function findTotal(){
+    var arr = document.getElementsByClassName('amount');
+    var tot=0;
+    for(var i=0;i<arr.length;i++){
+        if(parseFloat(arr[i].value))
+            tot += parseFloat(arr[i].value);
+    }
+    document.getElementById('totalordercost').value = tot;
+}
+</script>
 
 </body>
 
