@@ -5,7 +5,72 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 
   
+<script type="text/javascript">
+<!--
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+    
+    function moveToNext(field,nextFieldID){
+  if(field.value.length >= field.maxLength){
+    document.getElementById(nextFieldID).focus();
+  }
+}
+//-->
+   
+</script>
   
+  
+  <script>
+    
+    
+     <script type="text/javascript">
+      function num(id) {
+          var e = document.getElementById(id);
+          if (e != null) {
+              var v = e.value;
+              if (/^\\d+$/.test(v)) {
+                  return parseInt(v, 10);
+              }
+          }
+          return 0;
+      }
+
+      function sum() {
+          var v1 = num("v1");
+          var v2 = num("v2");
+          var v3 = num("v3");
+          var r  = document.getElementById("result");
+          if (r != null) {
+              r.value = v1 + v2 + v3;
+          }
+      }
+
+      function addHandler(element, eventName, handler) {
+          if (element.addEventListener) {
+              element.addEventListener(eventName, handler, false);
+          } else if (element.attachEvent) {
+              element.attachEvent("on" + eventName, handler);
+          }
+      }
+
+      addHandler(window, "load",
+                 function() {
+                   addHandler(document.getElementById("v1"), "keyup", sum);
+                   addHandler(document.getElementById("v2"), "keyup", sum);
+                   addHandler(document.getElementById("v3"), "keyup", sum);
+                 });
+    </script>
+
+  </script>
+  
+  
+  
+
   
   
 <style>
@@ -226,6 +291,26 @@ hr {
  <label>Asset breakdown total</label>
 <p>This total automatically updates as you type.</p>
 <output id="result"></output>%
+      
+      
+     <form action="">
+      <fieldset>
+        <legend>Input</legend>
+        <label for="v1">Value 1</label>
+        <input type="text" id="v1">
+        <br>
+        <label for="v2">Value 2</label>
+        <input type="text" id="v2">
+        <br>
+        <label for="v3">Value 3</label>
+        <input type="text" id="v3">
+      </fieldset>
+      <fieldset>
+        <legend>Output</legend>
+        <input type="text" id="result" readonly>
+      </fieldset>
+    </form>
+     
 
 
         </fieldset>
@@ -233,20 +318,8 @@ hr {
   </form>
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <script>
-        $('.form-group').on('input','.prc',function(){
-      var totalSum = 0;
-      $('.form-group .prc').each(function(){
-        var inputVal = $(this).val();
-        if($.isNumeric(inputVal)){
-          totalSum += parseFloat(inputVal);
-        });
-      $('#result').text(totalSum)
-    });
 
-  </script>
 
 </body>
 
