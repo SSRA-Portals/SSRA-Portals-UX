@@ -2,7 +2,6 @@
 
 <head>
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 
   
@@ -106,7 +105,6 @@ hr {
   <hr>
   
   <form>
-    <fieldset>
 <p style="border-left: 6px solid #CACACA; padding:0px 0px 0px 25px; font-weight: bold;">To complete this section accurately, you may need. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   Proin efficitur, turpis sit amet tempor tincidunt, turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est.</p>
   <p>Some advestments do not obviously fall into any of the categories available. Proin efficitur, turpis sit amet tempor tincidunt, turpis nisi hendrerit 
@@ -160,12 +158,12 @@ hr {
   <p>Some advestments do not obviously fall into any of the categories available. Proin efficitur, turpis sit amet tempor tincidunt, turpis nisi hendrerit 
     magna, vitae accumsan lectus neque eu lectus. Integer ac felis est.</p>
         
-   <div style="margin-top: 30px">  
+    <fieldset>
      
   <div class="form-group">
-  <label for="property">Property</label><br>
-         <input type="number" class="form-control prc">%<br></div>
-  </div>
+  <label>Property</label><br>
+         <input type="number" class="form-control prc">%
+      </div>
 
   <a href="#/" onclick="toggle_visibility('help3');">Help with property</a>
 <div id="help3" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
@@ -252,6 +250,8 @@ hr {
 
   </form>
   </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <script>
         $('.form-group').on('input','.prc',function(){
