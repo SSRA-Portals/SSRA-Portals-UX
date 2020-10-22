@@ -106,6 +106,7 @@ hr {
   <hr>
   
   <form>
+    <fieldset>
 <p style="border-left: 6px solid #CACACA; padding:0px 0px 0px 25px; font-weight: bold;">To complete this section accurately, you may need. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   Proin efficitur, turpis sit amet tempor tincidunt, turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est.</p>
   <p>Some advestments do not obviously fall into any of the categories available. Proin efficitur, turpis sit amet tempor tincidunt, turpis nisi hendrerit 
@@ -145,12 +146,12 @@ hr {
     <h4 style="margin-top: 0px; padding-top: 0px"> Date of Valuation of Assets</h4>
     <p style="color:">For example, 31 3 2019 or 31 03 2019</p>
  
-    <label for="dd" style="float:left;">Day</label>
-    <input type="text" id="dd" maxlength=2 label="Day" onkeyup="moveToNext(this,'mm')" style="margin: 0 4px 0 4px; width: 30px; "/>
-<label for="mm" style="float:left;">Month</label>
-    <input type="text" id="mm" maxlength=2 label="Month"  onkeyup="moveToNext(this,'yyyy')" style="margin: 0 4px 0 4px; width: 30px; "/>
-<label for="yyyy" style="float:left;">Year</label>
-    <input type="text" id="yyyy"  label="Year"  maxlength=4 style="margin: 0 4px 0 4px; width: 70px; " />
+    <label for="dd" style="float:left;">Day
+    <input type="text" id="dd" maxlength=2 label="Day" onkeyup="moveToNext(this,'mm')" style="margin: 0 4px 0 4px; width: 30px; "/></label>
+<label for="mm" style="float:left;">Month
+    <input type="text" id="mm" maxlength=2 label="Month"  onkeyup="moveToNext(this,'yyyy')" style="margin: 0 4px 0 4px; width: 30px; "/></label>
+<label for="yyyy" style="float:left;">Year
+    <input type="text" id="yyyy"  label="Year"  maxlength=4 style="margin: 0 4px 0 4px; width: 70px; " /></label>
      </div>
 
     
@@ -173,10 +174,9 @@ hr {
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
     
     
-   <div style="margin-top: 30px"> 
    <div class="form-group">
-     <label for="insurance">Insurnace Fund</label><br>
-         <input type="number" class="form-control prc">%<br></div>
+     <label>Insurnace Fund</label>
+         <input type="number" class="form-control prc"/>%
    </div>
      
   <a href="#/" onclick="toggle_visibility('help4');">Help with Insurance fund</a>
@@ -186,10 +186,9 @@ hr {
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
 
         
-   <div style="margin-top: 30px">  
      <div class="form-group">
-        <label for="annuities">Deferred or immediate full insured annuites</label><br>
-         <input type="number" class="form-control prc">%<br></div>
+        <label>Deferred or immediate full insured annuites</label>
+         <input type="number" class="form-control prc"/>%
      </div>
 
   <a href="#/" onclick="toggle_visibility('help5');">Help with Deferred or immediate full insured annuites</a>
@@ -198,11 +197,10 @@ hr {
   Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
     
-   <div style="margin-top: 30px">   
                                   <div class="form-group">
 
-     <label for="hedge">Hedge Fund</label><br>
-         <input type="number" class="form-control prc">%<br></div>
+     <label>Hedge Fund</label><br>
+         <input type="number" class="form-control prc">%
                                                  </div>
 
   <a href="#/" onclick="toggle_visibility('help6');">Help with Hedge fund</a>
@@ -211,12 +209,10 @@ hr {
   Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
     
-   <div style="margin-top: 30px">   
-                                  <div class="form-group">
-
-     <label for="insurance">Insurnace Fund</label><br>
-         <input type="number" class="form-control prc">%<br></div>
-                                                         </div>
+          <div class="form-group">
+            <label>Insurnace Fund</label>
+         <input type="number" class="form-control prc">%
+         </div>
 
   <a href="#/" onclick="toggle_visibility('help7');">Help with Insurance fund</a>
 <div id="help7" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
@@ -224,12 +220,10 @@ hr {
   Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
 
-   <div style="margin-top: 30px">  
-                                  <div class="form-group">
-
-     <label for="cash">Cash and current assets</label><br>
-         <input type="number" class="form-control prc">%<br></div>
-</div>
+   <div class="form-group">
+     <label>Cash and current assets</label>
+         <input type="number" class="form-control prc">%
+     </div>
 
   <a href="#/" onclick="toggle_visibility('help8');">Help with Cash and current assets</a>
 <div id="help8" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
@@ -238,11 +232,9 @@ hr {
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
     
     
-       <div style="margin-top: 30px">   
-           <div class="form-group">
-
-         <label for="Commodities">Commodities</label><br>
-         <input type="number" class="form-control prc">%<br></div>
+         <div class="form-group">
+         <label>Commodities</label><br>
+         <input type="number" class="form-control prc">%
 </div>
 
   <a href="#/" onclick="toggle_visibility('help9');">Help with Commodities</a>
@@ -251,12 +243,13 @@ hr {
   Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
 
- <label for="Asset-breakdown">Asset breakdown total</label>
+ <label>Asset breakdown total</label>
 <p>This total automatically updates as you type.</p>
 <output id="result"></output>%
 
 
-    
+        </fieldset>
+
   </form>
   </div>
 
