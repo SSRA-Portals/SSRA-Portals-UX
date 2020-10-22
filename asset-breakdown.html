@@ -28,7 +28,7 @@
         var inputVal = $(this).val();
         if($.isNumeric(inputVal)){
           totalSum += parseFloat(inputVal);
-        }});
+        });
       $('#result').text(totalSum)
     });
    
@@ -167,8 +167,12 @@ hr {
   <p>Some advestments do not obviously fall into any of the categories available. Proin efficitur, turpis sit amet tempor tincidunt, turpis nisi hendrerit 
     magna, vitae accumsan lectus neque eu lectus. Integer ac felis est.</p>
         
-   <div style="margin-top: 30px">  <label for="property">Property</label><br>
-  <input type="number" id="property" name="property">%<br></div>
+   <div style="margin-top: 30px">  
+     
+  <div class="form-group">
+  <label for="property">Property</label><br>
+  <input type="number" id="property" name="property" class="form-control prc>%<br></div>
+  </div>
 
   <a href="#/" onclick="toggle_visibility('help3');">Help with property</a>
 <div id="help3" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
@@ -177,9 +181,12 @@ hr {
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
     
     
-   <div style="margin-top: 30px">   <label for="insurance">Insurnace Fund</label><br>
-     <input type="number" id="insurance" name="insurance">%<br></div>
-
+   <div style="margin-top: 30px"> 
+   <div class="form-group">
+     <label for="insurance">Insurnace Fund</label><br>
+     <input type="number" id="insurance" name="insurance" class="form-control prc>%<br></div>
+   </div>
+     
   <a href="#/" onclick="toggle_visibility('help4');">Help with Insurance fund</a>
 <div id="help4" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
   turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est. Nulla massa leo, blandit sit amet blandit quis, feugiat non nisi. 
@@ -187,8 +194,11 @@ hr {
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
 
         
-   <div style="margin-top: 30px">   <label for="annuities">Deferred or immediate full insured annuites</label><br>
-     <input type="number" id="annuites" name="annuites">%<br></div>
+   <div style="margin-top: 30px">  
+     <div class="form-group">
+        <label for="annuities">Deferred or immediate full insured annuites</label><br>
+        <input type="number" id="annuites" name="annuites" class="form-control prc>%<br></div>
+     </div>
 
   <a href="#/" onclick="toggle_visibility('help5');">Help with Deferred or immediate full insured annuites</a>
 <div id="help5" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
@@ -196,8 +206,12 @@ hr {
   Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
     
-   <div style="margin-top: 30px">   <label for="hedge">Hedge Fund</label><br>
+   <div style="margin-top: 30px">   
+                                  <div class="form-group">
+
+     <label for="hedge">Hedge Fund</label><br>
      <input type="number" id="hedge" name="hedge">%<br></div>
+                                                 </div>
 
   <a href="#/" onclick="toggle_visibility('help6');">Help with Hedge fund</a>
 <div id="help6" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
@@ -205,8 +219,12 @@ hr {
   Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
     
-   <div style="margin-top: 30px">   <label for="insurance">Insurnace Fund</label><br>
+   <div style="margin-top: 30px">   
+                                  <div class="form-group">
+
+     <label for="insurance">Insurnace Fund</label><br>
      <input type="number" id="insurance" name="insurance">%<br></div>
+                                                         </div>
 
   <a href="#/" onclick="toggle_visibility('help7');">Help with Insurance fund</a>
 <div id="help7" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
@@ -214,8 +232,12 @@ hr {
   Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
 
-   <div style="margin-top: 30px">   <label for="cash">Cash and current assets</label><br>
-     <input type="number" id="cash" name="cash">%<br></div>
+   <div style="margin-top: 30px">  
+                                  <div class="form-group">
+
+     <label for="cash">Cash and current assets</label><br>
+     <input type="number" id="cash" name="cash" class="form-control prc>%<br></div>
+</div>
 
   <a href="#/" onclick="toggle_visibility('help8');">Help with Cash and current assets</a>
 <div id="help8" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
@@ -224,8 +246,12 @@ hr {
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
     
     
-       <div style="margin-top: 30px">   <label for="Commodities">Commodities</label><br>
-     <input type="number" id="Commodities" name="Commodities" class="form-control prc">%<br></div>
+       <div style="margin-top: 30px">   
+           <div class="form-group">
+
+         <label for="Commodities">Commodities</label><br>
+         <input type="number" id="Commodities" name="Commodities" class="form-control prc">%<br></div>
+</div>
 
   <a href="#/" onclick="toggle_visibility('help9');">Help with Commodities</a>
 <div id="help9" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
