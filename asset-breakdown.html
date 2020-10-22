@@ -23,17 +23,9 @@
 //-->
    
 </script>
-  
-  
-    
-  
-  
-
-  
+ 
   
 <style>
-  
-  
   
   body { font-family: 'Open Sans', sans-serif;
     color: #585858;
@@ -95,10 +87,6 @@ hr {
   padding: 30px;
   }
   
-
-  
-  
-  
 </style>
 
 
@@ -109,7 +97,6 @@ hr {
   <h1>Asset-Breakdown</h1>
   <hr>
   
-  <form>
 <p style="border-left: 6px solid #CACACA; padding:0px 0px 0px 25px; font-weight: bold;">To complete this section accurately, you may need. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   Proin efficitur, turpis sit amet tempor tincidunt, turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est.</p>
   <p>Some advestments do not obviously fall into any of the categories available. Proin efficitur, turpis sit amet tempor tincidunt, turpis nisi hendrerit 
@@ -144,11 +131,12 @@ hr {
 
 </div>
 
-  
+
   <div id="date" class="boxed">
     <h4 style="margin-top: 0px; padding-top: 0px"> Date of Valuation of Assets</h4>
     <p style="color:">For example, 31 3 2019 or 31 03 2019</p>
- 
+ <form>
+
     <label for="dd" style="float:left;">Day
     <input type="text" id="dd" maxlength=2 label="Day" onkeyup="moveToNext(this,'mm')" style="margin: 0 4px 0 4px; width: 30px; "/></label>
 <label for="mm" style="float:left;">Month
@@ -156,14 +144,14 @@ hr {
 <label for="yyyy" style="float:left;">Year
     <input type="text" id="yyyy"  label="Year"  maxlength=4 style="margin: 0 4px 0 4px; width: 70px; " /></label>
      </div>
-
+    </form>
     
     
       <h2>Asset-Breakdown</h2>
   <p>Some advestments do not obviously fall into any of the categories available. Proin efficitur, turpis sit amet tempor tincidunt, turpis nisi hendrerit 
     magna, vitae accumsan lectus neque eu lectus. Integer ac felis est.</p>
 
-
+<form>
           <p><label>Property</label>
           <input onblur="findTotal()" type="text" class="amount" name="property" /><span style="float:left">%</span></p>
    
@@ -211,24 +199,14 @@ hr {
   turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est. Nulla massa leo, blandit sit amet blandit quis, feugiat non nisi. 
   Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
-
-
-
+  
      
      <p><strong>Overall Cost of Order <span class="required">*</span></strong><br />
          <input type="text" name="totalordercost" id="totalordercost" />%</p>
 
+  </form>
 
-
-
-        
   </div>
-
-
-
-
-
-
 
 
 <script>
