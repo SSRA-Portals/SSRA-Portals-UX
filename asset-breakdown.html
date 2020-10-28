@@ -163,6 +163,7 @@ hr {
   The sum of the asset breakdown items must equal 100%</p>
 
 <form>
+  <fieldset>
           <p style="margin-bottom: 40px"><label>Property</label>
           <input onblur="findTotals()" type="text" class="amount" name="property" required style="width:60px; float: left"  />%</span></p>
    
@@ -268,11 +269,13 @@ hr {
       <p>This total automatically updates as you type.<p/>
         <h2 style="font-size: 25px"> <input type="text" name="totalordercost" id="totalordercost" style="width:60px; float: left; border: 0px; font-size: 25px; font-weight: bold"  />%</p></h2>
 
-  </form>
+</feildset>
+
+<field>
 
 
   <div class="boxed" style="padding-bottom: 20px">
-    <form>
+
        <h3 style="margin: 5px 0 5px 0; padding: 0px">Bond categories</h3>
        <p style="margin: 5px 0 30px 0; padding: 0px">If bonds are held, indicate the % split over the following catagories. The following three fields
     must add up to 100%.</p>
@@ -310,7 +313,9 @@ hr {
       <p>This total automatically updates as you type.<p/>
         <h2 style="font-size: 25px"> <input type="text" name="totalbonds" id="totalbonds" style="width:60px; float: left; border: 0px; font-size: 25px; font-weight: bold"  />%</p></h2>
 
-
+  </fieldset>
+  
+  <button>Submit</button>
 
     </form>
     
