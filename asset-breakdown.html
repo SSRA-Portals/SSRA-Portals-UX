@@ -273,7 +273,7 @@ hr {
     must add up to 100%.</p>
     
           <label for="GovBond">Fixed interest government bonds</label>
-          <input onblur="findTotal()" type="text" class="amount" name="preprintcost" required    style="margin: 5px 4px 30px 4px; width: 70px; " >
+          <input onblur="findTotal()" type="text" class="bondamount" name="preprintcost" required    style="margin: 5px 4px 30px 4px; width: 70px; " >
       
    <p style="margin-bottom: 40px"><a href="#/" onclick="toggle_visibility('help6');">Fixed interest government bonds help</a></p>
 <div id="help6" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
@@ -283,7 +283,7 @@ hr {
 
       
           <label for="GovBond">Fixed interest non-government bonds</label>
-          <input onblur="findTotal()" type="text" class="amount" name="preprintcost" required    style="margin: 5px 4px 30px 4px; width: 70px; " >
+          <input onblur="findTotal()" type="text" class="bondamount" name="preprintcost" required    style="margin: 5px 4px 30px 4px; width: 70px; " >
       
          <p style="margin-bottom: 40px"><a href="#/" onclick="toggle_visibility('help6');">Fixed interest non-government bonds help</a></p>
 <div id="help6" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
@@ -293,7 +293,7 @@ hr {
       
       
                 <label for="GovBond">Inflation linked bonds</label>
-          <input onblur="findTotal()" type="text" class="amount" name="preprintcost" required    style="margin: 5px 4px 30px 4px; width: 70px; " >
+          <input onblur="findTotal()" type="text" class="bondamount" name="preprintcost" required    style="margin: 5px 4px 30px 4px; width: 70px; " >
       
          <p style="margin-bottom: 40px"><a href="#/" onclick="toggle_visibility('help6');">Inflation linked bonds</a></p>
 <div id="help6" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
@@ -303,7 +303,7 @@ hr {
 
      <strong>Bond categories total <span class="required">*</span></strong><br />
       <p>This total automatically updates as you type.<p/>
-        <h2 style="font-size: 25px"> <input type="text" name="totalordercost" id="totalordercost" style="width:60px; float: left; border: 0px; font-size: 25px; font-weight: bold"  />%</p></h2>
+        <h2 style="font-size: 25px"> <input type="text" name="totalbonds" id="totalordercost" style="width:60px; float: left; border: 0px; font-size: 25px; font-weight: bold"  />%</p></h2>
 
 
 
@@ -323,6 +323,18 @@ hr {
     }
     document.getElementById('totalordercost').value = tot;
 }
+  
+  
+    function findTotal(){
+    var arr = document.getElementsByClassName('bondamount');
+    var tot=0;
+    for(var i=0;i<arr.length;i++){
+        if(parseFloat(arr[i].value))
+            tot += parseFloat(arr[i].value);
+    }
+    document.getElementById('totalbonds').value = tot;
+}
+
 </script>
 
 </body>
