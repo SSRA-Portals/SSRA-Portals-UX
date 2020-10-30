@@ -387,7 +387,6 @@ hr {
           
 
 
-<output type="text" name="total" id="total" class="hvr-pop" readonly placeholder="Must total 100"></output>
 
 <script>
     function findTotal() {
@@ -402,7 +401,15 @@ hr {
             }                       
         document.getElementById('total').value = tot;   
         // check that weightage scores = 100    
-        if (tot !== 100 ) {  
+        if (tot !== 100 ) {   
+            alert("Please make sure numbers total 100.");
+                $("input").focus(function() {
+                     $( this ).css( "border-color", "red" ).val("");
+                });
+                $('#form1').find('#total').val('');
+                return false;
+            }   
+    }
           
 
           var el1 = document.getElementById("total");
