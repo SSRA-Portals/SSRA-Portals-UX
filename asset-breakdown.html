@@ -272,6 +272,7 @@ hr {
      <strong>Overall Cost of Order <span class="required">*</span></strong><br />
       <p>This total automatically updates as you type.<p/>
         <h2 style="font-size: 25px"> <input type="text" name="totalordercost" id="totalordercost" style="width:60px; float: left; border: 0px; font-size: 25px; font-weight: bold"  />%</p></h2>
+            <div id="txtNameError3" style="display: none; color: red">Please make sure numbers total 100%</div>
 
 </feildset>
 
@@ -316,7 +317,7 @@ hr {
      <strong>Bond categories total <span class="required">*</span></strong><br />
       <p>This total automatically updates as you type.<p/>
         <h2 style="font-size: 25px"> <input type="text" name="totalbonds" id="totalbonds" style="width:60px; float: left; border: 0px; font-size: 25px; font-weight: bold"  />%</p></h2>
-            <div id="txtNameError2" style="display: none;">Please make sure numbers total 100%</div>
+            <div id="txtNameError2" style="display: none; color: red">Please make sure numbers total 100%</div>
 
   </fieldset>
 
@@ -360,7 +361,7 @@ hr {
      <strong>Bond categories total <span class="required">*</span></strong><br />
       <p>This total automatically updates as you type.<p/>
         <h2 style="font-size: 25px"> <input type="text" name="totalequities" id="totalequities" style="width:60px; float: left; border: 0px; font-size: 25px; font-weight: bold"  />%</p></h2>
-            <div id="txtNameError" style="display: none;">Please make sure numbers total 100%</div>
+            <div id="txtNameError" style="display: none; color: red">Please make sure numbers total 100%</div>
 
 </div>
   </fieldset>
@@ -385,7 +386,8 @@ hr {
     document.getElementById('totalordercost').value = tot;
             // check that weightage scores = 100    
         if (tot !== 100 ) {   
-            alert("Please make sure numbers total 100.");
+              /*alert("Please make sure numbers total 100%");*/
+    document.getElementById("txtNameError2").style.display = "block");
                 $("input").focus(function() {
                      $( this ).css( "border-color", "red" ).val("");
                 });
@@ -408,7 +410,7 @@ hr {
         if (tot !== 100 ) {   
           
               /*alert("Please make sure numbers total 100%");*/
-    document.getElementById("txtNameError2").style.display = "block";
+    document.getElementById("txtNameError3").style.display = "block");
 
 
           $("input").focus(function() {
@@ -433,7 +435,7 @@ hr {
         if (tot !== 100 ) {  
           
               /*alert("Please make sure numbers total 100%");*/
-    document.getElementById("txtNameError").style.display = "block";
+    document.getElementById("txtNameError").style.display = "block");
 
           
                 $("input").focus(function() {
