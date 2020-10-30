@@ -375,6 +375,43 @@ hr {
   </div>
 
 
+
+<fieldset>      
+     <input  type="text" name="qty"  id="qty1" oninput="findTotal()" class="hvr-pop" required/>                          
+     <input  type="text" name="qty" id="qty2" oninput="findTotal()" class="hvr-pop" required/>                           
+     <input type="text" name="qty"  id="qty3" oninput="findTotal()" class="hvr-pop" required/>                         
+     <input type="text" name="qty" id="qty4" oninput="findTotal()" class="hvr-pop" required/>                              
+     <input type="text" name="qty"  id="qty5" oninput="findTotal()" class="hvr-pop" required/>                            
+     <input type="text" name="qty"  id="qty6" oninput="findTotal()" class="hvr-pop" required/>        
+</fieldset>      
+<output type="text" name="total" id="total" class="hvr-pop" readonly placeholder="Must total 100"></output>
+
+<script>
+    function findTotal() {
+        "use strict";
+        var arr = document.getElementsByName('qty');
+        var tot = 0;
+        for(var i=0; i<arr.length;i++){
+            if(parseInt(arr[i].value)) {
+                tot += parseInt(arr[i].value);
+
+                }
+            }                       
+        document.getElementById('total').value = tot;   
+        // check that weightage scores = 100    
+        if (tot !== 100 ) {   
+            alert("Please make sure numbers total 100.");
+                $("input").focus(function() {
+                     $( this ).css( "border-color", "red" ).val("");
+                });
+                $('#form1').find('#total').val('');
+                return false;
+            }   
+    }
+</script>
+
+
+
 <script>
   function findTotals(){
     var arr = document.getElementsByClassName('amount');
