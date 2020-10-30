@@ -361,7 +361,6 @@ hr {
      <strong>Bond categories total <span class="required">*</span></strong><br />
       <p>This total automatically updates as you type.<p/>
         <h2 style="font-size: 25px"> <input type="text" name="totalequities" id="totalequities" style="width:60px; float: left; border: 0px; font-size: 25px; font-weight: bold"  />%</p></h2>
-            <div id="txtNameError" style="display: none; color: red">Please make sure numbers total 100%</div>
 
 </div>
   </fieldset>
@@ -383,7 +382,11 @@ hr {
      <input type="text" name="qty" id="qty4" oninput="findTotal()" class="hvr-pop" required/>                              
      <input type="text" name="qty"  id="qty5" oninput="findTotal()" class="hvr-pop" required/>                            
      <input type="text" name="qty"  id="qty6" oninput="findTotal()" class="hvr-pop" required/>        
-</fieldset>      
+</fieldset>     
+          <div id="name" style="display:none; color: red">Total must add to 100</div></p>
+          
+
+
 <output type="text" name="total" id="total" class="hvr-pop" readonly placeholder="Must total 100"></output>
 
 <script>
@@ -399,11 +402,22 @@ hr {
             }                       
         document.getElementById('total').value = tot;   
         // check that weightage scores = 100    
-        if (tot !== 100 ) {   
-            alert("Please make sure numbers total 100.");
+        if (tot !== 100 ) {  
+          
+
+          var el1 = document.getElementById("total");
+el1.style.display = "block";
+document.myForm.Name.focus();
+return false;
+}
+          
+          
+          
+           /* alert("Please make sure numbers total 100.");
                 $("input").focus(function() {
                      $( this ).css( "border-color", "red" ).val("");
-                });
+                });*/
+         
                 $('#form1').find('#total').val('');
                 return false;
             }   
