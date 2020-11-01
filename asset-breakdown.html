@@ -373,7 +373,7 @@ hr {
 
      <div style="width: 80%; float: left">
        <p><label>UK quoted</label>
-          <input  type="text" name="quoted"  id="quoted1" oninput="quotedTotal()" class="hvr-pop" style="float: left;" required>%</p>
+          <input  type="text" name="quoted"  id="quoted1" oninput="Total()" class="hvr-pop" style="float: left;" required>%</p>
            <div style="clear:both"></div>
 
            <p style="margin: 0px 0px 40px 0px; class="help" ><a href="#/" onclick="toggle_visibility('help14');" >Help with UK quoted</a></p>
@@ -383,7 +383,7 @@ hr {
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
 
      <p><label>Overseas quoted</label>
-       <input  type="text" name="quoted" id="quoted2" oninput="quotedTotal()" class="hvr-pop" style="float: left" required>% </p>
+       <input  type="text" name="quoted" id="quoted2" oninput="Total()" class="hvr-pop" style="float: left" required>% </p>
     <div style="clear:both"></div>
 
        <p style="margin: 0px 0px 40px 0px; class="help"><a href="#/" onclick="toggle_visibility('help15');">Help with Overseas quoted</a></p>
@@ -394,7 +394,7 @@ hr {
 
        
          <p>  <label>Xxxx</label>
-       <input type="text" name="quoted"  id="quoted3" oninput="quotedTotal()" class="hvr-pop" style="float: left" required> %</p>
+       <input type="text" name="quoted"  id="quoted3" oninput="Total()" class="hvr-pop" style="float: left" required> %</p>
     <div style="clear:both"></div>
 
               <p style="margin: 0px 0px 40px 0px; class="help"><a href="#/" onclick="toggle_visibility('help16');">Xxxx</a></p>
@@ -405,7 +405,7 @@ hr {
                                                          
 <div id="alert6" style="display: none; color: red">Totals must add up to 100%</div>
 
-<output type="text" name="totalquoted" id="quoted" class="hvr-pop" readonly placeholder="Must total 100%"></output>
+<output type="text" name="totalquoted" id="totalquoted" class="hvr-pop" readonly placeholder="Must total 100%"></output>
 
                                                          
 </fieldset>
@@ -563,7 +563,7 @@ hr {
     }
   
   
-      function quotedTotal() {
+      function Total() {
         "use strict";
         var arr = document.getElementsByName('quoted');
         var tot = 0;
