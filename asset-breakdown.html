@@ -124,13 +124,13 @@ hr {
 
 <body>
   <div style="width: 70%">
-  <h1 style="margin-left: 18px">Asset-Breakdown</h1>
+  <h1 style="margin-left: 30px">Asset-Breakdown</h1>
   <hr>
   
 <p style="border-left: 6px solid #CACACA; margin-left: 18px; padding:0px 0px 0px 25px; font-weight: bold;">To complete this section accurately, you may need advice from investment professionals 
   who are appropriately qualified, for example, the Scheme's investment advisor or asset manager </p>
     
-  <p style="margin-left: 18px">Some investments do not obviously fall into any of the categories available here. Please see below for guidance on the key characteristics of 
+  <p style="margin-left: 30px">Some investments do not obviously fall into any of the categories available here. Please see below for guidance on the key characteristics of 
     each asset category to help you decide which category best reflect that investment's risk characteristics.</p>
   
    <div class="help"> 
@@ -165,12 +165,12 @@ hr {
 </div>
                                                                                                       
                                                                                                                               
-  <h2 style="margin-left: 18px">Asset breakdown</h2>
-  <p style="margin-left: 18px">Asset allocations should be taken from the scheme's most recently audited accounts. All percentages can be accurate to a maximum of two decimal places.
+  <h2 style="margin-left: 30px">Asset breakdown</h2>
+  <p style="margin-left: 30px">Asset allocations should be taken from the scheme's most recently audited accounts. All percentages can be accurate to a maximum of two decimal places.
   The sum of the asset breakdown items must equal 100%</p>
   
 <fieldset>     
-    <div style="float: left; padding: 0px; height: 1600px; margin: 0px 10px 0px 18px;">
+    <div style="float: left; padding: 0px; height: 1600px; margin: 0px 10px 0px 22px;">
      <div style="border-left: 6px solid white; height: 1px; padding: 0; margin: 0"></div>
 
      <div id="alert2" style="display: none; border-left: 6px solid red; height: 1600px; padding: 0; margin: 0"></div>
@@ -360,10 +360,10 @@ hr {
                                                                                                             
                                                                                                             
                                                                                                             
-                                                                                                            <fieldset class="boxed"> 
+ <fieldset class="boxed"> 
       
-       <h3 style="margin: 5px 0 5px 0; padding: 0px">Bond categories</h3>
-       <p style="margin: 5px 0 30px 0; padding: 0px">If bonds are held, indicate the % split over the following catagories. The following three fields
+       <h3 style="margin: 5px 0 5px 0; padding: 0px">Equity categories</h3>
+       <p style="margin: 5px 0 30px 0; padding: 0px">If equities are held, indicate the % split over the following catagories. The following three fields
     must add up to 100%.</p>
 
    <div style="float: left; padding: 0px; height: 600px; margin: 0px 10px 0px 0px;">
@@ -372,40 +372,40 @@ hr {
     </div>
 
      <div style="width: 80%; float: left">
-       <p><label>Fixed interest government bonds</label>
-          <input  type="text" name="bonds"  id="bonds1" oninput="Total()" class="hvr-pop" style="float: left;" required>%</p>
+       <p><label>UK quoted</label>
+          <input  type="text" name="quoted"  id="quoted1" oninput="quotedTotal()" class="hvr-pop" style="float: left;" required>%</p>
            <div style="clear:both"></div>
 
-           <p style="margin: 0px 0px 40px 0px; class="help" ><a href="#/" onclick="toggle_visibility('help11');" >Help with Fixed interest government bonds</a></p>
-<div id="help11" style="display:none; margin-bottom: 40px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
+           <p style="margin: 0px 0px 40px 0px; class="help" ><a href="#/" onclick="toggle_visibility('help14');" >Help with UK quoted</a></p>
+<div id="help14" style="display:none; margin-bottom: 40px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
   turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est. Nulla massa leo, blandit sit amet blandit quis, feugiat non nisi. 
   Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
 
-     <p><label>Fixed interest non-government bonds</label>
-       <input  type="text" name="bonds" id="bonds2" oninput="Total()" class="hvr-pop" style="float: left" required>% </p>
+     <p><label>Overseas quoted</label>
+       <input  type="text" name="quoted" id="quoted2" oninput="quotedTotal()" class="hvr-pop" style="float: left" required>% </p>
     <div style="clear:both"></div>
 
-       <p style="margin: 0px 0px 40px 0px; class="help"><a href="#/" onclick="toggle_visibility('help12');">Help with Fixed interest non-government bonds</a></p>
-<div id="help12" class="help"  style="display:none; margin-bottom: 40px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
+       <p style="margin: 0px 0px 40px 0px; class="help"><a href="#/" onclick="toggle_visibility('help15');">Help with Overseas quoted</a></p>
+<div id="help15" class="help"  style="display:none; margin-bottom: 40px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
   turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est. Nulla massa leo, blandit sit amet blandit quis, feugiat non nisi. 
   Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
 
        
-         <p>  <label>Inflation linked bonds</label>
-       <input type="text" name="bonds"  id="bonds3" oninput="Total()" class="hvr-pop" style="float: left" required> %</p>
+         <p>  <label>Xxxx</label>
+       <input type="text" name="quoted"  id="quoted3" oninput="quotedTotal()" class="hvr-pop" style="float: left" required> %</p>
     <div style="clear:both"></div>
 
-              <p style="margin: 0px 0px 40px 0px; class="help"><a href="#/" onclick="toggle_visibility('help13');">Help with Inflation linked bonds</a></p>
-<div id="help13" style="display:none; margin-bottom: 40px" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
+              <p style="margin: 0px 0px 40px 0px; class="help"><a href="#/" onclick="toggle_visibility('help16');">Xxxx</a></p>
+<div id="help16" style="display:none; margin-bottom: 40px" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
   turpis nisi hendrerit magna, vitae accumsan lectus neque eu lectus. Integer ac felis est. Nulla massa leo, blandit sit amet blandit quis, feugiat non nisi. 
   Mauris ligula lorem, facilisis in porttitor ut, elementum ac orci. Morbi feugiat ex sit amet lorem scelerisque, a placerat sem posuere. Nunc iaculis et 
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
                                                          
 <div id="alert3" style="display: none; color: red">Totals must add up to 100%</div>
 
-<output type="text" name="totalbonds" id="totalbonds" class="hvr-pop" readonly placeholder="Must total 100%"></output>
+<output type="text" name="totalquoted" id="quoted" class="hvr-pop" readonly placeholder="Must total 100%"></output>
 
                                                          
 </fieldset>
@@ -561,6 +561,32 @@ hr {
 
 
     }
+  
+  
+      function quotedTotal() {
+        "use strict";
+        var arr = document.getElementsByName('quoted');
+        var tot = 0;
+        for(var i=0; i<arr.length;i++){
+            if(parseInt(arr[i].value)) {
+                tot += parseInt(arr[i].value);
+
+                }
+            }                       
+        document.getElementById('totalquoted').value = tot;   
+        // check that weightage scores = 100    
+        if (tot !== 100 ) {   
+           document.getElementById("alert5").style.display = "block";
+           document.getElementById("alert6").style.display = "block";
+
+
+    return false;
+
+    }
+
+
+    }
+
                                                                     
 
 
