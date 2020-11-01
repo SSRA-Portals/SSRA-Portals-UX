@@ -366,7 +366,6 @@ hr {
   </fieldset>
 
   
-  <button>Submit</button>
 
     </form>
     
@@ -374,12 +373,10 @@ hr {
   </div>
 
 
-
-<fieldset>   
-  
+<form>
+<fieldset>     
     <div style="float: left; width: 30px">
      <div id="alert2" style="display: none; border-left: 6px solid red; height: 600px; padding: 0"></div>
-
   </div>
 
      <div style="width: 60%; float: left"><input  type="text" name="qty"  id="qty1" oninput="findTotal()" class="hvr-pop" required/>                          
@@ -388,11 +385,14 @@ hr {
      <input type="text" name="qty" id="qty4" oninput="findTotal()" class="hvr-pop" required/>                              
      <input type="text" name="qty"  id="qty5" oninput="findTotal()" class="hvr-pop" required/>                            
      <input type="text" name="qty"  id="qty6" oninput="findTotal()" class="hvr-pop" required/>        
-</fieldset>     
 
  <div id="alert" style="display: none; color: red">Totals must add up to 100%</div>
 
 <output type="text" name="total" id="total" class="hvr-pop" readonly placeholder="Must total 100"></output></div>
+</fieldset>     
+
+<form>  
+  
 <script>
     function findTotal() {
         "use strict";
