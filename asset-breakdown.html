@@ -147,6 +147,8 @@ hr {
     <p style="margin: 5px 0 5px 0; padding: 0px">For example, 31 3 2019 or 31 03 2019</p>
    
     <form>
+<fieldset>     
+      
     
     <p style="float:left;"><label for="dd">Day</label>
     <input type="text" id="dd" maxlength=2 label="Day" onkeyup="moveToNext(this,'mm')" style="margin: 0 4px 0 4px; width: 30px; "></p>
@@ -154,19 +156,18 @@ hr {
     <input type="text" id="mm" maxlength=2 label="Month"  onkeyup="moveToNext(this,'yyyy')" style="margin: 0 4px 10px 4px; width: 30px; "></p>
 <p style="float:left;"><label for="yyyy">Year</label>
     <input type="text" id="yyyy"  label="Year" maxlength=4 style="margin: 0 4px 0 4px; width: 70px; " /></p>
-   </form>
                                                                                                      
     <div style="clear: both"></div>
 
+</fieldset>     
 
 </div>
                                                                                                       
                                                                                                                               
-      <h2>Asset breakdown</h2>
+  <h2>Asset breakdown</h2>
   <p>Asset allocations should be taken from the scheme's most recently audited accounts. All percentages can be accurate to a maximum of two decimal places.
   The sum of the asset breakdown items must equal 100%</p>
   
-<form>
 <fieldset>     
     <div style="float: left; width: 6px; padding-right: 10px; height: 100%">
      <div id="alert2" style="display: none; border-left: 6px solid red; height: 700px; width: 6px; padding: 0"></div>
