@@ -318,7 +318,7 @@ hr {
 
      <div style="width: 80%; float: left">
        <p><label>Fixed interest government bonds</label>
-          <input  type="text" name="bonds"  id="bonds1" oninput="Total()" class="hvr-pop" style="float: left;" required>%</p>
+          <input  type="text" name="bonds"  id="bonds1" oninput="Totals()" class="hvr-pop" style="float: left;" required>%</p>
            <div style="clear:both"></div>
 
            <p style="margin: 0px 0px 40px 0px; class="help" ><a href="#/" onclick="toggle_visibility('help11');" >Help with Fixed interest government bonds</a></p>
@@ -328,7 +328,7 @@ hr {
   nulla quis auctor. Proin a tristique mi, vitae iaculis erat. Aenean mollis convallis porttitor.</div>
 
      <p><label>Fixed interest non-government bonds</label>
-       <input  type="text" name="bonds" id="bonds2" oninput="Total()" class="hvr-pop" style="float: left" required>% </p>
+       <input  type="text" name="bonds" id="bonds2" oninput="Totals()" class="hvr-pop" style="float: left" required>% </p>
     <div style="clear:both"></div>
 
        <p style="margin: 0px 0px 40px 0px; class="help"><a href="#/" onclick="toggle_visibility('help12');">Help with Fixed interest non-government bonds</a></p>
@@ -339,7 +339,7 @@ hr {
 
        
          <p>  <label>Inflation linked bonds</label>
-       <input type="text" name="bonds"  id="bonds3" oninput="Total()" class="hvr-pop" style="float: left" required> %</p>
+       <input type="text" name="bonds"  id="bonds3" oninput="Totals()" class="hvr-pop" style="float: left" required> %</p>
     <div style="clear:both"></div>
 
               <p style="margin: 0px 0px 40px 0px; class="help"><a href="#/" onclick="toggle_visibility('help13');">Help with Inflation linked bonds</a></p>
@@ -538,7 +538,7 @@ hr {
                                                                     
 
                                                                     
-    function Total() {
+    function Totals() {
         "use strict";
         var arr = document.getElementsByName('bonds');
         var tot = 0;
