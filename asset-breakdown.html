@@ -480,7 +480,7 @@ hr {
     must add up to 100%.</p>
     
           <label for="GovBond">Fixed interest government bonds</label>
-          <input onblur="findTotal()" type="text" class="bondamount" name="preprintcost" required    style="margin: 5px 4px 30px 4px; width: 70px; " >
+          <input onblur="Total()" type="text" class="bondamount" name="preprintcost" required    style="margin: 5px 4px 30px 4px; width: 70px; " >
       
    <p style="margin-bottom: 40px"><a href="#/" onclick="toggle_visibility('help6');">Fixed interest government bonds help</a></p>
 <div id="help6" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
@@ -490,7 +490,7 @@ hr {
 
       
           <label for="GovBond">Fixed interest non-government bonds</label>
-          <input onblur="findTotal()" type="text" class="bondamount" name="preprintcost" required    style="margin: 5px 4px 30px 4px; width: 70px; " >
+          <input onblur="Total()" type="text" class="bondamount" name="preprintcost" required    style="margin: 5px 4px 30px 4px; width: 70px; " >
       
          <p style="margin-bottom: 40px"><a href="#/" onclick="toggle_visibility('help6');">Fixed interest non-government bonds help</a></p>
 <div id="help6" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
@@ -500,7 +500,7 @@ hr {
       
       
                 <label for="GovBond">Inflation linked bonds</label>
-          <input onblur="findTotal()" type="text" class="bondamount" name="preprintcost" required    style="margin: 5px 4px 30px 4px; width: 70px; " >
+          <input onblur="Total()" type="text" class="bondamount" name="preprintcost" required    style="margin: 5px 4px 30px 4px; width: 70px; " >
       
          <p style="margin-bottom: 40px"><a href="#/" onclick="toggle_visibility('help6');">Inflation linked bonds</a></p>
 <div id="help6" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur, turpis sit amet tempor tincidunt, 
@@ -571,6 +571,9 @@ hr {
 </div>
   
 <script>
+
+
+
     function findTotal() {
             "use strict";
         var arr = document.getElementsByName('qty');
@@ -595,7 +598,7 @@ hr {
                                                                     
 
                                                                     
-function findTotal() {
+function Total() {
         "use strict";
         var arr = document.getElementsByName('bonds');
         var tot = 0;
