@@ -465,7 +465,7 @@ hr {
                                                          
 <div id="alert3" style="display: none; color: red">Totals must add up to 100%</div>
 
-<output type="text" name="totalbonds" id="total" class="hvr-pop" readonly placeholder="Must total 100%"></output>
+<output type="text" name="totalbonds" id="totalbonds" class="hvr-pop" readonly placeholder="Must total 100%"></output>
 
                                                          
 </fieldset>
@@ -586,6 +586,30 @@ hr {
         if (tot !== 100 ) {   
            document.getElementById("alert").style.display = "block";
            document.getElementById("alert2").style.display = "block";
+
+
+    return false;
+
+    }
+
+
+    }
+                                                                    
+function findTotal() {
+        "use strict";
+        var arr = document.getElementsByName('bonds');
+        var tot = 0;
+        for(var i=0; i<arr.length;i++){
+            if(parseInt(arr[i].value)) {
+                tot += parseInt(arr[i].value);
+
+                }
+            }                       
+        document.getElementById('totalbonds').value = tot;   
+        // check that weightage scores = 100    
+        if (tot !== 100 ) {   
+           document.getElementById("alert3").style.display = "block";
+           document.getElementById("alert4").style.display = "block";
 
 
     return false;
