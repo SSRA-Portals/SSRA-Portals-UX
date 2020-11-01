@@ -375,8 +375,14 @@ hr {
 
 
 
-<fieldset>      
-     <input  type="text" name="qty"  id="qty1" oninput="findTotal()" class="hvr-pop" required/>                          
+<fieldset>   
+  
+    <div style="float: left; width: 5%">
+     <div id="alert2" style="display: none; border-left: 6px solid red; height: 300px; padding: 0"></div>
+
+  </div>
+
+     <div style="width: 60%; float: left"><input  type="text" name="qty"  id="qty1" oninput="findTotal()" class="hvr-pop" required/>                          
      <input  type="text" name="qty" id="qty2" oninput="findTotal()" class="hvr-pop" required/>                           
      <input type="text" name="qty"  id="qty3" oninput="findTotal()" class="hvr-pop" required/>                         
      <input type="text" name="qty" id="qty4" oninput="findTotal()" class="hvr-pop" required/>                              
@@ -386,8 +392,7 @@ hr {
 
  <div id="alert" style="display: none; color: red">Totals must add up to 100%</div>
 
-<output type="text" name="total" id="total" class="hvr-pop" readonly placeholder="Must total 100"></output>
-
+<output type="text" name="total" id="total" class="hvr-pop" readonly placeholder="Must total 100"></output></div>
 <script>
     function findTotal() {
         "use strict";
@@ -403,6 +408,8 @@ hr {
         // check that weightage scores = 100    
         if (tot !== 100 ) {   
            document.getElementById("alert").style.display = "block";
+           document.getElementById("alert2").style.display = "block";
+
 
     return false;
 
