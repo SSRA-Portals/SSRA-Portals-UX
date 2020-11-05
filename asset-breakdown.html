@@ -906,14 +906,14 @@ Please note that the ABC information required for PPF levy calculation purposes 
                                                                     
 }
                                                                    
-quoted.onblur = function() {
+quoted1.onblur = function() {
     if( $(this).val().length === 0 ) {
-    quoted.classList.add('invalid');
+    quoted1.classList.add('invalid');
     error.innerHTML = 'Please enter a correct email.'
   }
 };
 
-quoted.onfocus = function() {
+quoted1.onfocus = function() {
   if (this.classList.contains('invalid')) {
     // remove the "error" indication, because the user wants to re-enter something
     this.classList.remove('invalid');
