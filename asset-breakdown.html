@@ -168,6 +168,12 @@ hr {
   margin: 40px 0 40px 0;
   }
   
+.invalid { border-color: red; }
+
+ #error { color: red }
+  
+  
+  
 </style>
 
 
@@ -891,6 +897,22 @@ Please note that the ABC information required for PPF levy calculation purposes 
 
 
     }
+                                                                    
+                                                                    input.onblur = function() {
+  if (!input.value.includes('@')) { // not email
+    input.classList.add('invalid');
+    error.innerHTML = 'Please enter a correct email.'
+  }
+};
+
+input.onfocus = function() {
+  if (this.classList.contains('invalid')) {
+    // remove the "error" indication, because the user wants to re-enter something
+    this.classList.remove('invalid');
+    error.innerHTML = "";
+  }
+};
+
 
                                                                     
 
