@@ -871,7 +871,12 @@ Please note that the ABC information required for PPF levy calculation purposes 
     }
 
 
+    else {
+           document.getElementById("alert").style.display = "none";
+           document.getElementById("alert2").style.display = "none";
+}
     }
+                                                                    
   
   
       function Total() {
@@ -893,13 +898,15 @@ Please note that the ABC information required for PPF levy calculation purposes 
 
     return false;
 
-    }
-
-
+    else {
+           document.getElementById("alert").style.display = "none";
+           document.getElementById("alert2").style.display = "none";
+}
     }
                                                                     
-                                                                    input.onblur = function() {
-  if (!input.value.includes('@')) { // not email
+                                                                    
+input.onblur = function() {
+    if( $(this).val().length === 0 ) {
     input.classList.add('invalid');
     error.innerHTML = 'Please enter a correct email.'
   }
@@ -912,7 +919,6 @@ input.onfocus = function() {
     error.innerHTML = "";
   }
 };
-
 
                                                                     
 
