@@ -785,7 +785,7 @@ Please note that the ABC information required for PPF levy calculation purposes 
 
        
          <p>  <label>Xxxx</label>
-       <input type="text" name="quoted"  id="quoted3" oninput="Total()" class="hvr-pop" style="float: left" required> &nbsp  %</p>
+       <input type="text" name="quoted"  id="input" oninput="Total()" class="hvr-pop" style="float: left" required> &nbsp  %</p>
     <div style="clear:both"></div>
 
               <p style="margin: 0px 0px 40px 0px; class="help"><a href="#/" onclick="toggle_visibility('help16');">Xxxx</a></p>
@@ -908,7 +908,7 @@ Please note that the ABC information required for PPF levy calculation purposes 
 input.onblur = function() {
     if( $(this).val().length === 0 ) {
     input.classList.add('invalid');
-    error.innerHTML = 'Please enter a correct email.'
+    quoted.innerHTML = 'All fields must be filled in'
   }
 };
 
