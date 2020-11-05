@@ -168,7 +168,7 @@ hr {
   margin: 40px 0 40px 0;
   }
   
-.invalid { border-color: red; }
+.invalid { border: 4px solid red}
 
  #error { color: red }
   
@@ -764,6 +764,8 @@ Please note that the ABC information required for PPF levy calculation purposes 
 
      <div style="width: 80%; float: left">
        <p><label>UK quoted</label>
+                    <div id="error"></div>
+
           <input  type="text" name="quoted"  id="quoted" oninput="Total()" class="hvr-pop" style="float: left;" required> &nbsp %</p>
            <div style="clear:both"></div>
 
@@ -908,7 +910,20 @@ Please note that the ABC information required for PPF levy calculation purposes 
                                                                    
                                                                    
                                                                     
+quoted.onblur = function() {
+    if( $(this).val().length === 0 ) {
+    quoted.classList.add('invalid');
+    error.innerHTML = 'Value required'
+  }
+};
 
+quoted.onfocus = function() {
+  if (this.classList.contains('invalid')) {
+    // remove the "error" indication, because the user wants to re-enter something
+    this.classList.remove('invalid');
+    error.innerHTML = "";
+  }
+};
                                                                     
 
 
