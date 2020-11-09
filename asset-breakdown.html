@@ -569,6 +569,8 @@
                                                       
                                                       
        <p><label>Fixed interest government bonds</label>
+                                                           <div id="error11" style="margin: 0px"></div>
+
           <input  type="text" name="bonds"  id="bonds1" oninput="Totals()" class="hvr-pop" style="float: left;" autocomplete="off" required>  &nbsp %</p>
            <div style="clear:both"></div>
                                                                          
@@ -600,6 +602,8 @@
               
               
      <p><label>Fixed interest non-government bonds</label>
+            <div id="error12" style="margin: 0px"></div>
+
        <input  type="text" name="bonds" id="bonds2" oninput="Totals()" class="hvr-pop" style="float: left" autocomplete="off" required> &nbsp % </p>
     <div style="clear:both"></div>
 
@@ -645,6 +649,8 @@
 
        
          <p>  <label>Inflation linked bonds</label>
+         <div id="error13" style="margin: 0px"></div>
+
        <input type="text" name="bonds"  id="bonds3" oninput="Totals()" class="hvr-pop" style="float: left" autocomplete="off" required> &nbsp  %</p>
     <div style="clear:both"></div>
 
@@ -1066,7 +1072,54 @@ qty10.onfocus = function() {
     this.classList.remove('invalid');
     error10.innerHTML = "";
   }
-}    
+}  
+                          
+                          
+bonds1.onblur = function() {
+  if (!bonds1.value.length > 0) { // not email
+    bonds1.classList.add('invalid');
+    error11.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
+  }
+};
+
+bonds1.onfocus = function() {
+  if (this.classList.contains('invalid')) {
+    // remove the "error" indication, because the user wants to re-enter something
+    this.classList.remove('invalid');
+    error11.innerHTML = "";
+  }
+}   
+                          
+bonds2.onblur = function() {
+  if (!bonds2.value.length > 0) { // not email
+    bonds2.classList.add('invalid');
+    error12.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
+  }
+};
+
+bonds2.onfocus = function() {
+  if (this.classList.contains('invalid')) {
+    // remove the "error" indication, because the user wants to re-enter something
+    this.classList.remove('invalid');
+    error12.innerHTML = "";
+  }
+}  
+                          
+bonds3.onblur = function() {
+  if (!bonds3.value.length > 0) { // not email
+    bonds3.classList.add('invalid');
+    error13.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
+  }
+};
+
+bonds3.onfocus = function() {
+  if (this.classList.contains('invalid')) {
+    // remove the "error" indication, because the user wants to re-enter something
+    this.classList.remove('invalid');
+    error13.innerHTML = "";
+  }
+}                              
+                          
 
 
 </script>
