@@ -805,7 +805,8 @@
   
   
   
-              <a href="SSRA-Portals.github.io/thankyou.html" class="btn btn-primary" style="color: white">Save and Continue</a>
+         <input type="submit" id="register" value="Register" disabled="disabled"     a href="SSRA-Portals.github.io/thankyou.html" class="btn btn-primary" style="color: white">Save and Continue</input>
+
 
   
 
@@ -1170,7 +1171,28 @@ quoted3.onfocus = function() {
     this.classList.remove('invalid');
     error16.innerHTML = "";
   }
-}                              
+}     
+     
+                          (function() {
+    $('form > input').keyup(function() {
+
+        var empty = false;
+        $('form > input').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $('#register').attr('disabled', 'disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
+        } else {
+            $('#register').removeAttr('disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
+        }
+    });
+})()
+
+                          
+
 
 </script>
 
