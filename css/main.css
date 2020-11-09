@@ -129,8 +129,12 @@ hr {
   }
   
   
-  .invalid { border-color: red; }
-  #error { color: red }
+  .invalid { 
+    border-color: #A91717; 
+}
+  #error { 
+    color: #A91717
+}
 
 button {
   border-radius: 0;
