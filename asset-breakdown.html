@@ -1036,14 +1036,14 @@ This category can also include unrated investments where there is sufficient cer
                                                                     
 }
                                                                    
-qty.onblur = function() {
-  if (!qty.value.length > 0) { // not email
-    qty.classList.add('invalid');
+qty1.onblur = function() {
+  if (!qty1.value.length > 0) { // not email
+    qty1.classList.add('invalid');
     error.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
   }
 };
 
-qty.onfocus = function() {
+qty1.onfocus = function() {
   if (this.classList.contains('invalid')) {
     // remove the "error" indication, because the user wants to re-enter something
     this.classList.remove('invalid');
