@@ -250,7 +250,7 @@
 
 
      <label>Insurance Bonds</label>
-                <div id="error2" style="margin: 0px"></div>
+     <div id="error2" style="margin: 0px"></div>
 
        <input  type="text" name="qty" id="qty2" oninput="findTotal()" class="hvr-pop" style="float: left" autocomplete="off" required/>  &nbsp  %</span> 
          <div style="clear:both"></div>
@@ -275,6 +275,8 @@
                          </div>
        
            <label>Deferred or immediate fully insured annuities</label>
+                              <div id="error3" style="margin: 0px"></div>
+
        <input type="text" name="qty"  id="qty3" oninput="findTotal()" class="hvr-pop" style="float: left" autocomplete="off" required/ > &nbsp %</span> 
     <div style="clear:both"></div>
 
@@ -306,6 +308,8 @@
        
        
      <label>Hedge Funds</label>
+           <div id="error4" style="margin: 0px"></div>
+
        <input type="text" name="qty" id="qty4" oninput="findTotal()" class="hvr-pop" style="float: left" autocomplete="off" required/>  &nbsp  %</span>   
     <div style="clear:both"></div>
 
@@ -344,6 +348,8 @@
 
 
      <label>Cash and net current assets</label>
+                              <div id="error5" style="margin: 0px"></div>
+
        <input type="text" name="qty"  id="qty5" oninput="findTotal()" class="hvr-pop" style="float: left" autocomplete="off" required/>  &nbsp %</span>  
                 <div style="clear:both"></div>
 
@@ -385,6 +391,8 @@
 
 
      <label >Commodities</label>
+           <div id="error6" style="margin: 0px"></div>
+
        <input type="text" name="qty"  id="qty6" oninput="findTotal()" class="hvr-pop" style="float: left" autocomplete="off" required/>  &nbsp %</span>  
            <div style="clear:both"></div>
 
@@ -411,7 +419,9 @@
 
       
             <label >Asset-backed contributions (ABCs)</label>
-       <input type="text" name="qty"  id="qty6" oninput="findTotal()" class="hvr-pop" style="float: left" autocomplete="off" required/>  &nbsp  %</span> 
+                              <div id="error7" style="margin: 0px"></div>
+
+       <input type="text" name="qty"  id="qty7" oninput="findTotal()" class="hvr-pop" style="float: left" autocomplete="off" required/>  &nbsp  %</span> 
          <div style="clear:both"></div>
 
                      <p style="margin: 15px 0px 30px 0px; class="help"><a href="#/" onclick="toggle_visibility('help7');">Help with Asset-backed contributions (ABCs)</a></p>
@@ -442,6 +452,8 @@
 
        
             <label>Bonds</label>
+       <div id="error6" style="margin: 0px"></div>
+
                          <p  style="margin-top: -5px">If you enter a percentage greater than zero here, you must complete the Bond categories below.</p>
        <input type="text" name="qty"  id="qty6" oninput="findTotal()" class="hvr-pop" style="float: left" autocomplete="off" required/>  &nbsp  %</span> 
           <div style="clear:both"></div>
@@ -492,7 +504,9 @@
                          </div>-->
 
             <label  style="margin-top: 30px">Other</label>
-       <input type="text" name="qty"  id="qty6" oninput="findTotal()" class="hvr-pop" style="float: left" autocomplete="off" required/>  &nbsp  %</span> 
+     <div id="error8" style="margin: 0px"></div>
+
+       <input type="text" name="qty"  id="qty8" oninput="findTotal()" class="hvr-pop" style="float: left" autocomplete="off" required/>  &nbsp  %</span> 
          <div style="clear: both"></div>
 
                      <p style="margin: 15px 0px 30px 0px; class="help"><a href="#/" onclick="toggle_visibility('help10');">Help with other</a></p>
@@ -925,7 +939,102 @@ qty2.onfocus = function() {
     this.classList.remove('invalid');
     error2.innerHTML = "";
   }
-}                          
+}    
+                         
+ qty3.onblur = function() {
+  if (!qty3.value.length > 0) { // not email
+    qty3.classList.add('invalid');
+    error3.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
+  }
+};
+
+qty3.onfocus = function() {
+  if (this.classList.contains('invalid')) {
+    // remove the "error" indication, because the user wants to re-enter something
+    this.classList.remove('invalid');
+    error3.innerHTML = "";
+  }
+}
+                         
+                         
+                         qty4.onblur = function() {
+  if (!qty4.value.length > 0) { // not email
+    qty4.classList.add('invalid');
+    error4.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
+  }
+};
+
+qty4.onfocus = function() {
+  if (this.classList.contains('invalid')) {
+    // remove the "error" indication, because the user wants to re-enter something
+    this.classList.remove('invalid');
+    error4.innerHTML = "";
+  }
+}   
+                         
+                         
+                         qty5.onblur = function() {
+  if (!qty5.value.length > 0) { // not email
+    qty5.classList.add('invalid');
+    error5.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
+  }
+};
+
+qty5.onfocus = function() {
+  if (this.classList.contains('invalid')) {
+    // remove the "error" indication, because the user wants to re-enter something
+    this.classList.remove('invalid');
+    error5.innerHTML = "";
+  }
+}  
+                         
+                    qty6.onblur = function() {
+  if (!qty6.value.length > 0) { // not email
+    qty6.classList.add('invalid');
+    error6.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
+  }
+};
+
+qty6.onfocus = function() {
+  if (this.classList.contains('invalid')) {
+    // remove the "error" indication, because the user wants to re-enter something
+    this.classList.remove('invalid');
+    error6.innerHTML = "";
+  }
+} 
+                         
+                         
+                         
+                         qty7.onblur = function() {
+  if (!qty7.value.length > 0) { // not email
+    qty7.classList.add('invalid');
+    error7.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
+  }
+};
+
+qty7.onfocus = function() {
+  if (this.classList.contains('invalid')) {
+    // remove the "error" indication, because the user wants to re-enter something
+    this.classList.remove('invalid');
+    error7.innerHTML = "";
+  }
+}  
+                         
+                         
+                         qty8.onblur = function() {
+  if (!qty8.value.length > 0) { // not email
+    qty8.classList.add('invalid');
+    error8.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
+  }
+};
+
+qty8.onfocus = function() {
+  if (this.classList.contains('invalid')) {
+    // remove the "error" indication, because the user wants to re-enter something
+    this.classList.remove('invalid');
+    error8.innerHTML = "";
+  }
+}    
 
 
 </script>
