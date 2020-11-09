@@ -1,9 +1,13 @@
 <style>
   
   body { font-family: 'Open Sans', sans-serif;
-    margin: 30px;
-    width: 70%;
   }
+
+.width {
+    width: 70%;
+    margin: 30px;
+
+}
   
   p{ 
     margin: 30px 0px 30px 0;
@@ -234,11 +238,11 @@ button::-moz-focus-inner,
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    margin: 5px;
+.width {
     width: 100%;
+    margin: 5px;
 
-  }
+}
 } 
   
   
