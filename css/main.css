@@ -41,6 +41,7 @@ input {
     margin: 4px;
     border-radius: 0px;
     width: 80px;
+  border: solid 1px;
   }
   
 input[type=text], textarea {
