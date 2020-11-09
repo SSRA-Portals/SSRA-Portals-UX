@@ -170,6 +170,11 @@ hr {
   margin: 40px 0 40px 0;
   }
   
+  
+.border {
+  color: 4px solid red;
+  }
+  
 
   
   
@@ -1030,7 +1035,17 @@ This category can also include unrated investments where there is sufficient cer
                                                                     
 }
                                                                    
-    
+    $('.totalbonds').click(function() {
+  $(".input").each(function() {
+    if ($(this).val().trim() == '')
+      $(this).addClass('border');
+    else
+      $(this).removeClass('border');
+
+  })
+
+
+});
                                                                    
 
                                                                     
