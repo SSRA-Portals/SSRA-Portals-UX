@@ -359,11 +359,11 @@ hr {
       
     
     <p style="float:left;"><label for="dd">Day</label>
-    <input type="text" id="input" maxlength=2 label="Day" onkeyup="moveToNext(this,'mm')" style="margin: 0 4px 0 4px; width: 60px;" autocomplete="off"></p>
+    <input type="text" id="dd" maxlength=2 label="Day" onkeyup="moveToNext(this,'mm')" style="margin: 0 4px 0 4px; width: 60px;" autocomplete="off"></p>
 <p style="float:left;"><label for="mm">Month</label>
-    <input type="text" id="input" maxlength=2 label="Month"  onkeyup="moveToNext(this,'yyyy')" style="margin: 0 4px 10px 4px; width: 60px;" autocomplete="off"></p>
+    <input type="text" id="mm" maxlength=2 label="Month"  onkeyup="moveToNext(this,'yyyy')" style="margin: 0 4px 10px 4px; width: 60px;" autocomplete="off"></p>
 <p style="float:left;"><label for="yyyy">Year</label>
-    <input type="text" id="input"  label="Year" maxlength=4 style="margin: 0 4px 0 4px; width: 100px;" autocomplete="off"/></p>
+    <input type="text" id="yy"  label="Year" maxlength=4 style="margin: 0 4px 0 4px; width: 100px;" autocomplete="off"/></p>
                                                                                                      
     <div style="clear: both"></div>
 
@@ -384,6 +384,8 @@ hr {
 
      <div style="width: 80%; float: left;">
        <label>Property</label>
+                                          <div id="error"></div>
+
           <input  type="text" name="qty"  id="qty1" oninput="findTotal()" class="hvr-pop" style="float: left;" autocomplete="off" required/>  &nbsp %</span> 
        
                                                                                                                                  
@@ -1034,14 +1036,14 @@ This category can also include unrated investments where there is sufficient cer
                                                                     
 }
                                                                    
-input.onblur = function() {
-  if (!input.value.length > 0) { // not email
-    input.classList.add('invalid');
+qty.onblur = function() {
+  if (!qty.value.length > 0) { // not email
+    qty.classList.add('invalid');
     error.innerHTML = 'Please enter a correct email.'
   }
 };
 
-input.onfocus = function() {
+qty.onfocus = function() {
   if (this.classList.contains('invalid')) {
     // remove the "error" indication, because the user wants to re-enter something
     this.classList.remove('invalid');
