@@ -8,7 +8,8 @@
 
   <!-- Custom styles for this template -->
   <link href="css/heroic-features.css" rel="stylesheet">
-
+  
+<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
   
 <script type="text/javascript">
 <!--
@@ -169,20 +170,6 @@ hr {
   margin: 40px 0 40px 0;
   }
   
- input:required:focus {
-  border: 1px solid red;
-  outline: none;
-  }
-
- textarea:required:focus {
- border: 1px solid red;
- outline: none;
- }
-
-input:focus:invalid {
-border: 1px solid red;
-outline: none;
-}
 
   
   
@@ -1038,7 +1025,21 @@ This category can also include unrated investments where there is sufficient cer
                                                                     
 }
                                                                    
+    
                                                                    
+ $(document).ready(function() {  
+            $("input").focusout(function() {  
+                if($(this).val()=='') {  
+                    $(this).css('border', 'solid 2px red');  
+                } 
+                else { 
+                      
+                    // If it is not blank. 
+                    $(this).css('border', 'solid 2px green');     
+                }     
+            }) .trigger("focusout"); 
+        });  
+
                                                                     
                                                                     
 
