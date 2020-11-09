@@ -1,0 +1,148 @@
+<style>
+  
+  body { font-family: 'Open Sans', sans-serif;
+    margin: 30px;
+  }
+  
+  p{ 
+    margin: 30px 0px 30px 0;
+    color: #3D3D3D;
+    font-size: 15px;
+  }
+
+  
+  h1 {
+    font-size: 45px;
+    font-weight: 200;
+    color: #3D3D3D;
+        color: #0B0030;
+
+  }
+  
+  h2 {
+    font-size: 35px;
+    font-weight: 200;
+    color: #0B0030;
+  }
+  
+ h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3D3D3D;
+  }
+
+    
+input {
+    padding: 15px;
+    margin: 4px;
+    border-radius: 0px;
+    border: 3px solid black;
+    width: 80px;
+  }
+  
+input[type=text], textarea {
+  @include transition(all 0.30s ease-in-out);
+  outline: none;
+ /* padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;*/
+  border: 1px solid #666;
+}
+ 
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0px 0px 0px 3px  #FFBF47;
+  /*padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;*/
+  border: 3px solid rgba(112, 112, 112, 1);
+}
+ 
+  
+input, label {
+    display:block;
+    font-weight: bold;
+  margin: 0px 0 15px 0;
+}
+
+#date input, label {
+  float:left"
+}
+  
+ 
+
+  
+  
+fieldset {
+    border: 0;
+  margin: 0px;
+  padding: 0px;
+}  
+  
+  
+  
+a link {
+  color: #006EBC;
+  font-weight: bold;
+  margin: 2px 0 2px 0;
+}  
+  
+a hover {
+  color: #006EBC;
+  font-weight: bold;
+}
+a visited {
+  color: #006EBC;
+  font-weight: bold;
+}
+  
+.btn btn-primary  a link {
+  color: #ffffff;
+  font-weight: bold;
+  margin: 5px 0 10px 0;
+}  
+  
+.btn btn-primary  a hover {
+  color: #ffffff;
+  font-weight: bold;
+}
+.btn btn-primary  a visited {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+  
+a:-webkit-any-link {
+    color: #006EBC;
+  }
+
+  
+hr {
+  border-top: 1px solid #585858;
+  }
+  
+  
+.help p {
+    margin: 5px 0px 10px 0;
+    font-weight: bold;
+    color: #0B0030;
+  }
+  
+.help li {
+    font-weight: bold;
+    color: #0B0030;
+  }  
+  
+   
+.boxed {
+  background-color: #F0F0F0; 
+  padding: 30px 30px 0px 30px;
+  margin: 40px 0 40px 0;
+  }
+  
+  
+  .invalid { border-color: red; }
+  #error { color: red }
+
+
+  
+  
+  
+</style>
