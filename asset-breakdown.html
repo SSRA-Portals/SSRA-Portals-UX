@@ -455,7 +455,7 @@
        <div id="error8" style="margin: 0px"></div>
 
                          <p  style="margin-top: -5px">If you enter a percentage greater than zero here, you must complete the Bond categories below.</p>
-       <input type="text" name="qty"  id="qty6" oninput="findTotal()" class="hvr-pop" style="float: left" autocomplete="off" required/>  &nbsp  %</span> 
+       <input type="text" name="qty"  id="qty8" oninput="findTotal()" class="hvr-pop" style="float: left" autocomplete="off" required/>  &nbsp  %</span> 
           <div style="clear:both"></div>
 
             <!--    <p style="margin: 20px 0px 10px 0px; class="help"><a href="#/" onclick="toggle_visibility('help8');">Help with Bonds</a></p>
@@ -481,7 +481,7 @@
 
             <p style="margin-top: 0-5px">[h] If you enter a percentage greater than zero here, you must complete the Equity categories below.</p>
 
-       <input type="text" name="qty"  id="qty6" oninput="findTotal()" class="hvr-pop" style="float: left" autocomplete="off" required/>  &nbsp  %</span> 
+       <input type="text" name="qty"  id="qty9" oninput="findTotal()" class="hvr-pop" style="float: left" autocomplete="off" required/>  &nbsp  %</span> 
          <div style="clear:both"></div>
 
                  <!--    <p style="margin: 0px 0px 40px 0px; class="help"><a href="#/" onclick="toggle_visibility('help9');">Help with Equities</a></p>
@@ -508,7 +508,7 @@
             <label  style="margin-top: 30px">Other</label>
      <div id="error10" style="margin: 0px"></div>
 
-       <input type="text" name="qty"  id="qty8" oninput="findTotal()" class="hvr-pop" style="float: left" autocomplete="off" required/>  &nbsp  %</span> 
+       <input type="text" name="qty"  id="qty10" oninput="findTotal()" class="hvr-pop" style="float: left" autocomplete="off" required/>  &nbsp  %</span> 
          <div style="clear: both"></div>
 
                      <p style="margin: 15px 0px 30px 0px; class="help"><a href="#/" onclick="toggle_visibility('help10');">Help with other</a></p>
@@ -1054,7 +1054,7 @@ qty9.onfocus = function() {
 }    
 
                                                   qty10.onblur = function() {
-  if (!qty8.value.length > 0) { // not email
+  if (!qty10.value.length > 0) { // not email
     qty10.classList.add('invalid');
     error10.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
   }
