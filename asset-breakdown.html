@@ -213,7 +213,7 @@
 
      <div style="width: 80%; float: left;">
        <label>Property</label>
-        <div id="error"></div>
+        <div id="error" style="margin: 0px"></div>
 
           <input  type="text" name="qty"  id="qty1" oninput="findTotal()" class="hvr-pop" style="float: left;" autocomplete="off" required/>  &nbsp %</span> 
        
@@ -250,6 +250,8 @@
 
 
      <label>Insurance Bonds</label>
+                <div id="error2" style="margin: 0px"></div>
+
        <input  type="text" name="qty" id="qty2" oninput="findTotal()" class="hvr-pop" style="float: left" autocomplete="off" required/>  &nbsp  %</span> 
          <div style="clear:both"></div>
 
@@ -877,21 +879,7 @@
     }
                                                                     
 }
-                                                                   
-qty1.onblur = function() {
-  if (!qty1.value.length > 0) { // not email
-    qty1.classList.add('invalid');
-    error.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
-  }
-};
-
-qty1.onfocus = function() {
-  if (this.classList.contains('invalid')) {
-    // remove the "error" indication, because the user wants to re-enter something
-    this.classList.remove('invalid');
-    error.innerHTML = "";
-  }
-}                                                                   
+                                                                                                                                   
                                                                     
     function toggle_visibility(id) {
        var e = document.getElementById(id);
@@ -906,6 +894,38 @@ qty1.onfocus = function() {
     document.getElementById(nextFieldID).focus();
   }
 }
+                                                                   
+                                                                   
+qty1.onblur = function() {
+  if (!qty1.value.length > 0) { // not email
+    qty1.classList.add('invalid');
+    error.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
+  }
+};
+
+qty1.onfocus = function() {
+  if (this.classList.contains('invalid')) {
+    // remove the "error" indication, because the user wants to re-enter something
+    this.classList.remove('invalid');
+    error.innerHTML = "";
+  }
+}  
+  
+                        
+qty2.onblur = function() {
+  if (!qty2.value.length > 0) { // not email
+    qty2.classList.add('invalid');
+    error2.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
+  }
+};
+
+qty2.onfocus = function() {
+  if (this.classList.contains('invalid')) {
+    // remove the "error" indication, because the user wants to re-enter something
+    this.classList.remove('invalid');
+    error2.innerHTML = "";
+  }
+}                          
 
 
 </script>
