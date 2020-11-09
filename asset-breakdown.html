@@ -1142,14 +1142,14 @@ quoted.onfocus = function() {
 }    
                           
                           
-quoted1.onblur = function() {
-  if (!quoted1.value.length > 0) { // not email
-    quoted1.classList.add('invalid');
+quoted2.onblur = function() {
+  if (!quoted2.value.length > 0) { // not email
+    quoted2.classList.add('invalid');
     error15.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
   }
 };
 
-quoted1.onfocus = function() {
+quoted2.onfocus = function() {
   if (this.classList.contains('invalid')) {
     // remove the "error" indication, because the user wants to re-enter something
     this.classList.remove('invalid');
@@ -1157,14 +1157,14 @@ quoted1.onfocus = function() {
   }
 }                              
 
-quoted2.onblur = function() {
-  if (!quoted2.value.length > 0) { // not email
-    quoted2.classList.add('invalid');
+quoted3.onblur = function() {
+  if (!quoted3.value.length > 0) { // not email
+    quoted3.classList.add('invalid');
     error16.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
   }
 };
 
-quoted2.onfocus = function() {
+quoted3.onfocus = function() {
   if (this.classList.contains('invalid')) {
     // remove the "error" indication, because the user wants to re-enter something
     this.classList.remove('invalid');
