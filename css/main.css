@@ -132,8 +132,9 @@ hr {
   .invalid { 
     border: 3px solid #A91717; 
 }
-  #error { 
-    color: #A91717
+.error { 
+    color: #A91717;
+    margin: 0px;
 }
 
 button {
