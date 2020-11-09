@@ -702,8 +702,8 @@
                                                                                                             
  <fieldset class="boxed"> 
       
-       <h3 style="margin: 5px 0 5px 0; padding: 0px">Equity categories</h3>
-       <p style="margin: 5px 0 30px 0; padding: 0px">If any equities are held, indicate the % split over the following categories. The following three fields must add up to 100%.</p>
+       <h3 style="margin: 5px 0px 5px 0px; padding: 0px">Equity categories</h3>
+       <p style="margin: 5px 0px 10px 0px; padding: 0px">If any equities are held, indicate the % split over the following categories. The following three fields must add up to 100%.</p>
 
    <div style="float: left; padding: 0px; height: 420px; margin: 0px 10px 0px 0px;">
      <div style="border-left: 6px solid white; height: 1px; padding: 0; margin: 0"></div>
@@ -712,6 +712,7 @@
 
      <div style="width: 80%; float: left">
        <p><label>UK quoted equities</label>
+         <div id="error14" style="margin: 0px"></div>
 
           <input  type="text" name="quoted"  id="quoted" oninput="Total()" class="hvr-pop" style="float: left;" required> &nbsp %</p>
            <div style="clear:both"></div>
@@ -731,7 +732,9 @@
                          
 
      <p><label>Overseas quoted equities</label>
-       <input  type="text" name="quoted" id="quoted" oninput="Total()" class="hvr-pop" style="float: left" required> &nbsp % </p>
+                                  <div id="error15" style="margin: 0px"></div>
+
+       <input  type="text" name="quoted" id="quoted2" oninput="Total()" class="hvr-pop" style="float: left" required> &nbsp % </p>
     <div style="clear:both"></div>
 
        <p style="margin: 15px 0px 30px 0px; class="help"><a href="#/" onclick="toggle_visibility('help15');">Help with Overseas quoted equities</a></p>
@@ -757,7 +760,9 @@
 
        
          <p>  <label>Unquoted equities/private equity</label>
-       <input type="text" name="quoted"  id="quoted" oninput="Total()" class="hvr-pop" style="float: left" required> &nbsp  %</p>
+                    <div id="error16" style="margin: 0px"></div>
+
+       <input type="text" name="quoted"  id="quoted3" oninput="Total()" class="hvr-pop" style="float: left" required> &nbsp  %</p>
     <div style="clear:both"></div>
 
               <p style="margin: 15px 0px 30px 0px; class="help"><a href="#/" onclick="toggle_visibility('help16');">Help with unquoted equities/private equity</a></p>
@@ -1118,9 +1123,54 @@ bonds3.onfocus = function() {
     this.classList.remove('invalid');
     error13.innerHTML = "";
   }
-}                              
+}     
                           
+                          
+quoted.onblur = function() {
+  if (!quoted.value.length > 0) { // not email
+    quoted.classList.add('invalid');
+    error14.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
+  }
+};
 
+quoted.onfocus = function() {
+  if (this.classList.contains('invalid')) {
+    // remove the "error" indication, because the user wants to re-enter something
+    this.classList.remove('invalid');
+    error14.innerHTML = "";
+  }
+}    
+                          
+                          
+quoted1.onblur = function() {
+  if (!quoted1.value.length > 0) { // not email
+    quoted1.classList.add('invalid');
+    error15.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
+  }
+};
+
+quoted1.onfocus = function() {
+  if (this.classList.contains('invalid')) {
+    // remove the "error" indication, because the user wants to re-enter something
+    this.classList.remove('invalid');
+    error15.innerHTML = "";
+  }
+}                              
+
+quoted2.onblur = function() {
+  if (!quoted2.value.length > 0) { // not email
+    quoted2.classList.add('invalid');
+    error16.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
+  }
+};
+
+quoted2.onfocus = function() {
+  if (this.classList.contains('invalid')) {
+    // remove the "error" indication, because the user wants to re-enter something
+    this.classList.remove('invalid');
+    error16.innerHTML = "";
+  }
+}                              
 
 </script>
 
