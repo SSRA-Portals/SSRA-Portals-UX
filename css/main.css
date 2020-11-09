@@ -35,7 +35,6 @@
     font-weight: bold;
     color: #3D3D3D;
   }
-
     
 input {
     padding: 15px;
@@ -45,22 +44,17 @@ input {
     width: 80px;
   }
   
-input[type=text], textarea {
+/*input[type=text], textarea {
   @include transition(all 0.30s ease-in-out);
   outline: none;
- /* padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;*/
   border: 1px solid #666;
-}
+}*/
  
 input[type=text]:focus, textarea:focus {
   box-shadow: 0px 0px 0px 3px  #FFBF47;
-  /*padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;*/
   border: 3px solid rgba(112, 112, 112, 1);
 }
  
-  
 input, label {
     display:block;
     font-weight: bold;
