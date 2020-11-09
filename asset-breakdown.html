@@ -384,7 +384,7 @@ hr {
 
      <div style="width: 80%; float: left;">
        <label>Property</label>
-                                          <div id="error"></div>
+        <div id="error"></div>
 
           <input  type="text" name="qty"  id="qty1" oninput="findTotal()" class="hvr-pop" style="float: left;" autocomplete="off" required/>  &nbsp %</span> 
        
@@ -1039,7 +1039,7 @@ This category can also include unrated investments where there is sufficient cer
 qty.onblur = function() {
   if (!qty.value.length > 0) { // not email
     qty.classList.add('invalid');
-    error.innerHTML = 'Please enter a correct email.'
+    error.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
   }
 };
 
