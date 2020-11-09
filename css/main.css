@@ -47,7 +47,7 @@ input {
 input[type=text], textarea {
   @include transition(all 0.30s ease-in-out);
   outline: none;
-  border: 1px solid #666;
+  border: 1px solid;
 }
  
 input[type=text]:focus, textarea:focus {
