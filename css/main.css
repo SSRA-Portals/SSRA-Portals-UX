@@ -130,7 +130,7 @@ hr {
   
   
   .invalid { 
-    border-color: #A91717; 
+    border: 3px solid #A91717; 
 }
   #error { 
     color: #A91717
