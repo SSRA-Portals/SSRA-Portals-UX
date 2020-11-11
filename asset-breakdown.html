@@ -1146,7 +1146,17 @@ quoted3.onfocus = function() {
     });
 })()
 
-                          
+                            
+$(document).ready(function(){
+    $('#date input[type="text"]').blur(function(){
+        if(!$(this).val()){
+            document.getElementById("alertAB").style.display = "block";
+        } else{
+           document.getElementById("alertAB").style.display = "none";
+        }
+    });
+});
+                         
 
 
 </script>
