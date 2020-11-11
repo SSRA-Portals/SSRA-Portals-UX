@@ -186,7 +186,7 @@
 
     
     <p style="float:left;"><label for="dd" >Day</label>
-    <input type="text" id="alertAB" maxlength=2 label="Day" onkeyup="moveToNext(this,'mm')" style="margin: 0 4px 0 4px; width: 60px;" autocomplete="off"></p>
+    <input type="text" id="dd" maxlength=2 label="Day" onkeyup="moveToNext(this,'mm')" style="margin: 0 4px 0 4px; width: 60px;" autocomplete="off"></p>
 <p style="float:left;"><label for="mm">Month</label>
     <input type="text" id="mm" maxlength=2 label="Month"  onkeyup="moveToNext(this,'yyyy')" style="margin: 0 4px 10px 4px; width: 60px;" autocomplete="off"></p>
 <p style="float:left;"><label for="yyyy">Year</label>
@@ -857,6 +857,42 @@ Include relevant components of multi-asset funds and insurance funds.
     }
                                                                     
 }
+                                                                   
+      function Total() {
+        "use strict";
+        var arr = document.getElementsByName('dd');
+        var tot = 0;
+        for(var i=0; i<arr.length;i++){
+            if(parseInt(arr[i].value)) {
+                tot += parseInt(arr[i].value);
+
+                }
+            }                        
+         if (!dd.value.length > 0) {  {   
+           document.getElementById("errorAB").style.display = "block";
+           document.getElementById("AlertAB").style.display = "block";
+
+
+    return false;
+
+    }
+                                                                    
+    else {
+           document.getElementById("errorAB").style.display = "none";
+           document.getElementById("alertAB").style.display = "none";
+    }
+                                                                    
+}
+                                                                    
+qty1.onblur = function() {
+  if (!qty1.value.length > 0) { // not email
+    qty1.classList.add('invalid');
+    error.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
+  }
+};
+
+                                                                   
+                                                                   
                                                                                                                                    
                                                                     
     function toggle_visibility(id) {
@@ -1123,13 +1159,6 @@ quoted3.onfocus = function() {
   }
 }     
  
-alertAB.onfocus = function() {
-  if (this.classList.contains('invalid')) {
-    // remove the "error" indication, because the user wants to re-enter something
-    this.classList.remove('invalid');
-    errorAB.innerHTML = "Asset breakdown date required";
-  }
-}     
 
                           
      
