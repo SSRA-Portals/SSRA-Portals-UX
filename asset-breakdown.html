@@ -191,9 +191,9 @@
     <input type="text" id="mm" maxlength=2 label="Month"  onkeyup="moveToNext(this,'yyyy')" style="margin: 0 4px 10px 4px; width: 60px;" autocomplete="off"></p>
 <p style="float:left;"><label for="yyyy">Year</label>
     <input type="text" id="yy"  label="Year" maxlength=4 style="margin: 0 4px 0 4px; width: 100px;" autocomplete="off"/></p>
-                                                                                                     
+      </div>                                                                                               
     <div style="clear: both"></div>
-
+  </div>
 </fieldset>     
 
 </div>
@@ -770,17 +770,6 @@ Include relevant components of multi-asset funds and insurance funds.
 </div>
   
 <script>
-
-$(document).ready(function(){
-    $('#date input[type="text"]').blur(function(){
-        if(!$(this).val()){
-            document.getElementById("alertAB").style.display = "block";
-        } else{
-           document.getElementById("alertAB").style.display = "none";
-        }
-    });
-});
-  
 
 
     function findTotal() {
