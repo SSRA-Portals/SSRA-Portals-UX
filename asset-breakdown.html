@@ -858,38 +858,6 @@ Include relevant components of multi-asset funds and insurance funds.
                                                                     
 }
                                                                    
-      function Total() {
-        "use strict";
-        var arr = document.getElementsByName('dd');
-        var tot = 0;
-        for(var i=0; i<arr.length;i++){
-            if(parseInt(arr[i].value)) {
-                tot += parseInt(arr[i].value);
-
-                }
-            }                        
-         if (!dd.value.length > 0) {  {   
-           document.getElementById("errorAB").style.display = "block";
-           document.getElementById("AlertAB").style.display = "block";
-
-
-    return false;
-
-    }
-                                                                    
-    else {
-           document.getElementById("errorAB").style.display = "none";
-           document.getElementById("alertAB").style.display = "none";
-    }
-                                                                    
-}
-                                                                    
-qty1.onblur = function() {
-  if (!qty1.value.length > 0) { // not email
-    qty1.classList.add('invalid');
-    error.innerHTML = 'A value must be provided. Enter 0 if this asset type is not held'
-  }
-};
 
                                                                    
                                                                    
