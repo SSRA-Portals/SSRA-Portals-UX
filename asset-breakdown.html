@@ -3,7 +3,7 @@
 <head>
   
 <link href="SSRA-Portals.github.io/css/main.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+ <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
   
 <style>
@@ -771,6 +771,19 @@ Include relevant components of multi-asset funds and insurance funds.
 </div>
   
 <script>
+$(document).ready(function(){
+    $('#dderror input[type="text"]').blur(function(){
+        if(!$(this).val()){
+            document.getElementById("alertAB").style.display = "block";
+            document.getElementById("errorAB").style.display = "block";
+
+        } else{
+           document.getElementById("alertAB").style.display = "none";
+           document.getElementById("errorAB").style.display = "block";
+
+        }
+    });
+});
 
 
     function findTotal() {
@@ -1149,19 +1162,6 @@ quoted3.onfocus = function() {
 })()
 
                             
-$(document).ready(function(){
-    $('#dderror input[type="text"]').blur(function(){
-        if(!$(this).val()){
-            document.getElementById("alertAB").style.display = "block";
-            document.getElementById("errorAB").style.display = "block";
-
-        } else{
-           document.getElementById("alertAB").style.display = "none";
-           document.getElementById("errorAB").style.display = "block";
-
-        }
-    });
-});
                          
 
 
